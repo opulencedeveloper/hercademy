@@ -47,6 +47,8 @@ const ChooseIntrest = () => {
             alt="search icon"
             height={18}
             width={18}
+            loading="eager"
+            priority
             className="w-full h-full"
           />
         </div>

@@ -9,17 +9,19 @@ const Portal = (props) => {
   const [mounted, setMounted] = useState(false);
   const { children } = props;
   useEffect(() => {
-    
     setMounted(true);
   }, []);
 
   if (!mounted || typeof document === "undefined") {
     return null;
   }
-  
 
   return ReactDOM.createPortal(
-    <div className={inter.variable}>{children}</div>,
+    <div
+      className={`${inter.className} absolute top-0 w-full h-full bg-white pt-7 max-w-[375px]  left-1/2 transform -translate-x-1/2`}
+    >
+      {children}
+    </div>,
     document.getElementById("navigation")
   );
 };

@@ -5,7 +5,9 @@ import Image from "next/image";
 import angleRightIcon from "../../public/asset/icons/angle-right-icon.svg";
 import angleLeftIcon from "../../public/asset/icons/angle-left-icon.svg";
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
+
 import Portal from "../UI/Portal";
+import PickedDateSuccess from "./PickedDateSuccess";
 
 const availableTime = ["9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM"];
 
@@ -13,8 +15,13 @@ const Calender = (props) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState("9:00 AM");
+  const [isSaveDate, setIsSaveDate] = useState(false);
 
   const { toggleCalenderHandler } = props;
+
+  const toggleDateSuccess = () => {
+    setIsSaveDate(prev => !prev);
+  }
 
   const handleDateClick = (date) => {
     if (date.getMonth() < currentMonth.getMonth()) {
@@ -66,6 +73,8 @@ const Calender = (props) => {
           <div className="h-[14.04px] w-[17.84px]">
             <Image
               src={angleRightIcon}
+              height={14}
+              width={14}
               alt="angle right icon"
               className="w-full h-full"
             />
@@ -86,6 +95,8 @@ const Calender = (props) => {
           <div className="h-[14.04px] w-[17.84px]">
             <Image
               src={angleLeftIcon}
+              height={14}
+              width={17}
               alt="angle left icon"
               className="w-full h-full"
             />
@@ -191,50 +202,55 @@ const Calender = (props) => {
   };
 
   return (
-   <Portal> <div className="flex flex-col px-5 pb-4 h-full">
-      <div className="flex items-center pb-5">
-        <button onClick={toggleCalenderHandler} className="h-[14px] w-[14px]">
-          <Image
-            src={arrowBackIcon}
-            alt="back icon"
-            className="h-full w-full"
-            loading="eager"
-            priority
-          />
-        </button>
-        <div className="flex flex-1 justify-center text-[20px] font-bold">
-          Save Date
-        </div>
-      </div>
-      <div className="flex flex-col justify-between flex-1">
-        <div>
-          {" "}
-          {renderHeader()}
-          <Weekdays />
-          {renderDays()}
-          <div className="flex justify-between text-[14px] text-primary1 mt-6">
-            {availableTime.map((time, index) => {
-              const style =
-                selectedTime === time
-                  ? "border-primary"
-                  : "border-secondaryShade1";
-              return (
-                <button
-                  key={index}
-                  className={`px-2 py-1.5 font-semibold border rounded-[8px] ${style}`}
-                  onClick={() => setSelectedTime(time)}
-                >
-                  {time}
-                </button>
-              );
-            })}
+    <Portal>
+      <div className="flex flex-col px-5 pb-4 h-full">
+        <div className="flex items-center pb-5">
+          <button onClick={toggleCalenderHandler} className="h-[14px] w-[14px]">
+            <Image
+              src={arrowBackIcon}
+              alt="back icon"
+              className="h-full w-full"
+              height={14}
+              width={14}
+              loading="eager"
+              priority
+            />
+          </button>
+          <div className="flex flex-1 justify-center text-[20px] font-bold">
+            Save Date
           </div>
         </div>
-        <button className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
-          Save Date
-        </button>
+        <div className="flex flex-col justify-between flex-1">
+          <div>
+            {" "}
+            {renderHeader()}
+            <Weekdays />
+            {renderDays()}
+            <div className="flex justify-between text-[14px] text-primary1 mt-6">
+              {availableTime.map((time, index) => {
+                const style =
+                  selectedTime === time
+                    ? "border-primary"
+                    : "border-secondaryShade1";
+                return (
+                  <button
+                    key={index}
+                    className={`px-2 py-1.5 font-semibold border rounded-[8px] ${style}`}
+                    onClick={() => setSelectedTime(time)}
+                  >
+                    {time}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <button onClick={toggleDateSuccess} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+            Save Date
+          </button>
+        </div>
       </div>
-    </div> </Portal>
+      {isSaveDate && <PickedDateSuccess toggleDateSuccess={toggleDateSuccess} />}
+    </Portal>
   );
 };
 

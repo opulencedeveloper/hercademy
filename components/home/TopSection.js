@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import notificationIcon from "../../public/asset/icons/notifications-icon.svg";
 import avaterImage from "../../public/asset/images/avatar-image.svg";
 import pinkSearchIcon from "../../public/asset/icons/pink-search-icon.svg";
 
 const TopSection = () => {
+  const router = useRouter()
+
   return (
     <section className="px-5">
       <div className="flex justify-between">
@@ -19,14 +22,14 @@ const TopSection = () => {
             />
             <div className="rounded-full h-[10px] w-[10px] absolute top-0 right-0 bg-secondary2"></div>
           </div>
-          <div className="h-[34px] w-[34px]">
+          <button onClick={() => router.push("/profile")} className="h-[34px] w-[34px]">
             <Image
               src={avaterImage}
               height={34}
               width={34}
               className="h-full w-full"
             />
-          </div>
+          </button>
         </div>
       </div>
 

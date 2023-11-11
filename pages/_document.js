@@ -6,8 +6,8 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <div id="navigation"></div>
         <NextScript />
+        <div id="navigation"></div>
       </body>
     </Html>
   )

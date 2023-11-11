@@ -6,7 +6,6 @@ import UpcomingTechEvents from "@/components/home/UpcomingTechEvents";
 import SectionOne from "@/components/home/SectionOne";
 
 export default function Home() {
- 
   return (
     <Layout>
       <TopSection />
