@@ -4,9 +4,11 @@ import googleIcon from "../../public/asset/icons/google-icon.svg";
 import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
 import webDevImage from "../../public/asset/images/become-web-dev-image.svg";
 import frontEndFundametalsImage from "../../public/asset/images/front-end-fundametals-image.svg";
+import { useRouter } from "next/router";
 
 const recommendedCourses = [
   {
+    id: "c1",
     image: webDevImage,
     titleIcon: googleIcon,
     title: "Google",
@@ -14,6 +16,7 @@ const recommendedCourses = [
     duration: "3 weeks",
   },
   {
+    id: "c2",
     image: frontEndFundametalsImage,
     titleIcon: hertechtrailIcon,
     title: "Hertechtrail",
@@ -21,6 +24,7 @@ const recommendedCourses = [
     duration: "3 months",
   },
   {
+    id: "c3",
     image: webDevImage,
     titleIcon: googleIcon,
     title: "Google",
@@ -31,6 +35,8 @@ const recommendedCourses = [
 ];
 
 const RecommendedCourses = () => {
+  const router = useRouter();
+
   return (
     <section className="mt-7 px-5">
       <p className="text-primary1 text-[14px] font-semibold">
@@ -40,10 +46,18 @@ const RecommendedCourses = () => {
         {recommendedCourses.map((courseInfo, index) => (
           <div
             key={index}
+            onClick={() =>
+              router.push(`/recommendedcoursesdetails/${courseInfo.id}`)
+            }
             className="w-[185px] flex-shrink-0 rounded-[4px] overflow-hidden"
           >
             <div className="h-[107px] bg-green-200 w-full overflow-hidden">
-                <Image src={courseInfo.image} height={107} width={185} className="h-full w-full object-cover" />
+              <Image
+                src={courseInfo.image}
+                height={107}
+                width={185}
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="w-full bg-secondaryShade1 py-2 px-2.5">
               <div className="flex space-x-1.5 mb-0.5 ">
