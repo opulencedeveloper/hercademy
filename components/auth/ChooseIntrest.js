@@ -72,6 +72,7 @@ const ChooseIntrest = () => {
                 src={
                   interestData === selectedIntrest ? radioActive : radioInactive
                 }
+                alt="radio button"
                 height={20}
                 width={20}
                 className="h-full w-full"

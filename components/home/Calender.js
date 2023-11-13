@@ -203,7 +203,7 @@ const Calender = (props) => {
 
   return (
     <Portal>
-      <div className="flex flex-col px-5 pb-4 h-full">
+      <div className="flex flex-col px-4 pb-4 h-full bg-white">
         <div className="flex items-center pb-5">
           <button onClick={toggleCalenderHandler} className="h-[14px] w-[14px]">
             <Image

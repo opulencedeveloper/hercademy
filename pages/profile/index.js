@@ -13,6 +13,7 @@ const navItems = [
     title: "My Learning",
     dropDown: ["Ongoing courses", "Completed courses"],
   },
+  { title: "Porfolio" },
   { title: "Calendar" },
   { title: "Upgrade account" },
   { title: "Privacy" },
@@ -51,6 +52,7 @@ const Profile = () => {
         <div className="h-[61px] w-[63px] mb-5">
           <Image
             src={avaterImage}
+            alt="avatar"
             height={34}
             width={34}
             className="h-full w-full"
@@ -66,7 +68,10 @@ const Profile = () => {
         {navItems.map((navIfo, index) => (
           <>
             <button
-              onClick={() => handleToggle(index)}
+              onClick={() => {
+                handleToggle(index);
+                if (navIfo.title === "Porfolio") router.push("/portfolio");
+              }}
               key={index}
               className="flex justify-between w-full items-center text-primary1 text-[16px] h-[24px]"
             >

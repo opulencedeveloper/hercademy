@@ -22,7 +22,7 @@ const UpcomingTechEvents = () => {
   return showCalender ? (
     <Calender toggleCalenderHandler={toggleCalenderHandler}/>
   ) : (
-    <section className="px-5 mt-7">
+    <section className="px-4 my-7">
       <div className="flex justify-between">
         <p className="text-primary1 text-[14px] font-semibold">
           Upcoming Tech Events
@@ -37,6 +37,7 @@ const UpcomingTechEvents = () => {
           <div key={index} className="flex-shrink-0 w-[110px] h-full relative">
             <Image
               src={image}
+              alt="tech event"
               priority
               loading="eager"
               height={111}

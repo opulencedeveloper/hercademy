@@ -23,6 +23,7 @@ const PickedDateSuccess = ({ toggleDateSuccess }) => {
           <div className="h-[43.56px] w-[61.8px]">
             <Image
               src={checkIcon}
+              alt="check icon"
               height={43}
               width={61}
               priority

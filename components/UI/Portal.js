@@ -18,7 +18,7 @@ const Portal = (props) => {
 
   return ReactDOM.createPortal(
     <div
-      className={`${inter.className} absolute top-0 w-full h-full bg-white pt-7 max-w-[375px]  left-1/2 transform -translate-x-1/2`}
+      className={`${inter.className} absolute top-0 w-full h-full pt-7 max-w-[40rem]  left-1/2 transform -translate-x-1/2`}
     >
       {children}
     </div>,

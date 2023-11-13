@@ -38,7 +38,7 @@ const RecommendedCourses = () => {
   const router = useRouter();
 
   return (
-    <section className="mt-7 px-5">
+    <section className="mt-7 px-4">
       <p className="text-primary1 text-[14px] font-semibold">
         Recommended Courses
       </p>
@@ -49,13 +49,16 @@ const RecommendedCourses = () => {
             onClick={() =>
               router.push(`/recommendedcoursesdetails/${courseInfo.id}`)
             }
-            className="w-[185px] flex-shrink-0 rounded-[4px] overflow-hidden"
+            className="w-[185px] flex-shrink-0 rounded-[4px] overflow-hidden cursor-pointer"
           >
             <div className="h-[107px] bg-green-200 w-full overflow-hidden">
               <Image
                 src={courseInfo.image}
+                alt="Course Info"
                 height={107}
                 width={185}
+                priority
+                loading="eager"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -67,6 +70,8 @@ const RecommendedCourses = () => {
                     alt="google icon"
                     height={14}
                     width={14}
+                    priority
+                    loading="eager"
                     className="w-full h-full"
                   />
                 </div>

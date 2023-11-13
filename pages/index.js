@@ -1,18 +1,21 @@
-import TopSection from "@/components/home/TopSection";
-import SectionSelector from "@/components/home/SectionSelector";
 import Layout from "@/components/layout/Layout";
-import RecommendedCourses from "@/components/home/RecommendedCourses";
-import UpcomingTechEvents from "@/components/home/UpcomingTechEvents";
-import SectionOne from "@/components/home/SectionOne";
+import ExploreTab from "@/components/tabs/ExploreTab";
+
+import HomeTab from "@/components/tabs/HomeTab";
+import WishListTab from "@/components/tabs/WishListTab";
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedTab, setSelectedTab] = useState("Home");
+
+  const navSwitcherHandler = (val) => {
+    setSelectedTab(val);
+  };
   return (
-    <Layout>
-      <TopSection />
-      <SectionSelector />
-      <RecommendedCourses />
-      <UpcomingTechEvents />
-      <SectionOne />
+    <Layout navSwitcherHandler={navSwitcherHandler} selectedTab={selectedTab}>
+      {selectedTab === "Home" && <HomeTab />}
+      {selectedTab === "Explore" && <ExploreTab />}
+      {selectedTab === "Wishlist" && <WishListTab />}
     </Layout>
   );
 }

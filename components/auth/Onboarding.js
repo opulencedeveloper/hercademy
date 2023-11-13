@@ -71,7 +71,7 @@ const OnBoarding = ({ switcher }) => {
                 <p className="text-[20px] font-bold text-center mb-2">
                   {onBoardingtData.title}
                 </p>
-                <p className="text-[14px] text-secondary text-center px-5">
+                <p className="text-[14px] text-secondary text-center px-4">
                   {onBoardingtData.subTitle}
                 </p>
               </div>

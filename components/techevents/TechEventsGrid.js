@@ -106,6 +106,7 @@ const TechEventsGrid = () => {
                 <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden absolute top-0 left-2">
                   <Image
                     src={workspacePremiumIcon}
+                    alt="premiun icon"
                     priority
                     loading="eager"
                     height={24}
