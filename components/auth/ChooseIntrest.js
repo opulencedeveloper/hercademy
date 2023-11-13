@@ -1,9 +1,10 @@
+import { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 import searchIcon from "../../public/asset/icons/search-icon.svg";
 import radioInactive from "../../public/asset/icons/radio-inactive-icon.svg";
 import radioActive from "../../public/asset/icons/radio-active-icon.svg";
-import { useState } from "react";
 
 const interest = [
   "Blockchain",
@@ -21,6 +22,7 @@ const interest = [
 const ChooseIntrest = () => {
   const [selectedIntrest, setSelectedIntrest] = useState("");
   const [filterIntrest, setFilterIntrest] = useState(interest);
+  const router = useRouter();
 
   const filterIntrestHandler = (event) => {
     const inputedValue = event.target.value;
@@ -83,7 +85,7 @@ const ChooseIntrest = () => {
         ))}{" "}
       </div>
 
-      <button className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+      <button onClick={() => router.replace("/")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
         Choose
       </button>
     </div>
