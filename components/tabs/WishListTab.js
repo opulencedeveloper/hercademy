@@ -4,7 +4,7 @@ import addCircleIcon from "../../public/asset/icons/add-circle-icon.svg";
 
 const WishListTab = () => {
   return (
-    <section className="h-full flex pb-20 flex-col items-center justify-center">
+    <section className="h-full flex pb-20 flex-col overflow-y-auto items-center justify-center">
       <div className="h-[265.83px] w-[239.25px] mb-20">
         <Image src={contracttImage} className="h-full w-full" />
       </div>
