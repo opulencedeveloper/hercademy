@@ -10,7 +10,7 @@ const TechEvents = () => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <div className="relative max-w-[40rem] h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
       <section className="px-4 flex flex-col h-full overflow-hidden">
         {" "}
         <button className="h-[14px] w-[14px]">
@@ -32,7 +32,7 @@ const TechEvents = () => {
         </p>
         <TechEventsGrid />
       </section>
-    </Layout>
+    </div>
   );
 };
 

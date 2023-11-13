@@ -115,7 +115,7 @@ const RecommendedCourses = () => {
 
   const courseDetails = recommendedCourses.find((item) => item.id === courseId);
   return (
-    <Layout>
+    <section className="relative max-w-[40rem] h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
       <button className="h-[14px] w-[14px] ml-4">
         <Image
           src={arrowBackIcon}
@@ -215,7 +215,7 @@ const RecommendedCourses = () => {
           ))}
         </div>
       </section>
-    </Layout>
+    </section>
   );
 };
 
