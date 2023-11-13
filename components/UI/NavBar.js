@@ -24,7 +24,7 @@ const myNavigator = [
 const NavBar = (props) => {
   const { selectedTab, navSwitcherHandler } = props;
   return (
-    <div className="absolute bottom-0 max-w-[40rem] mx-auto flex justify-between bg-secondaryShade6 py-4 px-8">
+    <div className="absolute bottom-0 w-full flex justify-between bg-secondaryShade6 py-4 px-8">
       {myNavigator.map((navInfo, index) => {
         const style =
           selectedTab === navInfo.title ? "text-primary" : "text-primaryShade2";
