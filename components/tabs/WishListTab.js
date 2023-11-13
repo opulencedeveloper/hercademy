@@ -11,7 +11,7 @@ const WishListTab = () => {
       <p className="font-semibold text-[16px] mb-2">Your wishlist is empty</p>
       <p className="text-[12px] text-secondary">Create your first wishlist</p>
       <button className="flex items-center space-x-2 text-white bg-primary rounded-[8px] px-8 py-3 mt-14">
-        <div className="h-[24px] w-[24px]">
+        <div className="h-[18px] w-[18px] md:h-[24px] md:w-[24px]">
           <Image
             src={addCircleIcon}
             height={24}
