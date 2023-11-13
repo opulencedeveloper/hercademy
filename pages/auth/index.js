@@ -31,5 +31,5 @@ export default function Home() {
     default:
       componentToRender = <OnBoarding switcher={switcher} />;
   }
-  return <div className="relative max-w-[40rem] h-full mx-auto scrollbar-hide overflow-y-auto mt-7 pb-20">{componentToRender}</div>;
+  return <div className="relative max-w-[40rem] h-screen px-4 mx-auto scrollbar-hide overflow-y-auto mt-7 pb-20">{componentToRender}</div>;
 }
