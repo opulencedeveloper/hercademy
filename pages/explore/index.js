@@ -152,7 +152,7 @@ const Explore = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-start pl-4 mt-11 justify-between md:px-20 lg:px-32">
+      <div className="flex items-start px-4 mt-11 justify-between md:px-20 lg:px-32">
         <div>
           <p className="font-semibold text-[16px] md:text-[24px]">
             Empower Her
