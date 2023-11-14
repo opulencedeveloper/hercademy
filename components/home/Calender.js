@@ -203,7 +203,7 @@ const Calender = (props) => {
 
   return (
     <>
-      <div className="flex flex-col px-4 pb-4 h-screen overflow-hidden pt-14 max-w-[524px] mx-auto bg-white">
+      <div className="flex flex-col px-4 pb-4 h-screen overflow-hidden pt-7 max-w-[524px] mx-auto bg-white">
         <div className="flex items-center pb-5">
           <button onClick={() => router.back()} className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
             <Image

@@ -125,7 +125,7 @@ const RecommendedCourses = () => {
   if (!courseDetails) return <p>Page not found</p>;
   
   return (
-    <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
+    <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <button className="h-[14px] w-[14px] ml-4 md:ml-20 md:h-[24px] md:w-[24px] lg:ml-32">
         <Image
           src={arrowBackIcon}

@@ -27,7 +27,7 @@ const TechProgrammeDetail = () => {
   const programmesDetails = techProgrammesInfo.find((item) => item.id === programmeId);
 
   return (
-    <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
+    <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <button className="h-[14px] w-[14px] ml-4 md:h-[24px] md:w-[24px] md:ml-20 lg:ml-32">
         <Image
           src={arrowBackIcon}

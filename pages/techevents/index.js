@@ -10,7 +10,7 @@ const TechEvents = () => {
   const router = useRouter();
 
   return (
-    <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
+    <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <section className="px-4 flex flex-col h-full overflow-hidden md:px-20 lg:px-32">
         {" "}
         <button className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
