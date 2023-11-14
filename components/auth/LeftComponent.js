@@ -5,7 +5,7 @@ import welcomeImage from "../../public/asset/images/welcome-image.svg";
 const LeftComponent = ({ children }) => {
   return (
     <div className="flex h-screen overflow-hidden">
-      <section className="relative w-1/2 h-full overflow-hidden bg-black">
+      <section className="relative w-1/2 h-full overflow-hidden bg-black hidden md:block">
         <Image
           src={welcomeImage}
           className="w-full h-full object-cover opacity-25"

@@ -22,7 +22,7 @@ const HomeTab = () => {
       <SectionSelector />
       
         {" "}
-        <div className="flex justify-between mt-14 w-full h-full md:px-20 lg:px-32">
+        <div className="flex justify-between mt-8 w-full h-full md:mt-14 md:px-20 lg:px-32">
           <div className="hidden md:flex flex-col w-[280px] h-max  flex-shrink-0 shadow-customShadow2 rounded-[8px] bg-secondary5 p-7 mr-10">
             <div className="border-b border-secondaryShade1 pb-4">
               {" "}

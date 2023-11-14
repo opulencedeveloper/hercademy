@@ -46,7 +46,7 @@ const RecommendedCourses = () => {
   const router = useRouter();
 
   return (
-    <section className="flex flex-col mt-7 px-4 md:px-0">
+    <section className="flex flex-col px-4 md:px-0">
       <p className="text-primary1 text-[14px] font-semibold md:text-[24px]">
         Recommended Courses
       </p>
