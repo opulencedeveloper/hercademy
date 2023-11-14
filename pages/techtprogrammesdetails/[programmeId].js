@@ -1,9 +1,7 @@
 import Image from "next/image";
 
-import Layout from "@/components/layout/Layout";
 
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
-import frontEndFundametalsImage from "../../public/asset/images/front-end-fundametals-image.svg";
 import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
 import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-icon.svg";
 import bookMarkWhiteIcon from "../../public/asset/icons/bookmark-white-icon.svg";
@@ -16,6 +14,8 @@ import { useRouter } from "next/router";
 const techProgrammesInfo = [
   { id: "p1", image: image4 },
   { id: "p2", image: image5 },
+  { id: "p3", image: image4 },
+  { id: "p4", image: image5 },
 ];
 
 const TechProgrammeDetail = () => {
