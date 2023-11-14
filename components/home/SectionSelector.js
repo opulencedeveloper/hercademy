@@ -6,7 +6,7 @@ const SectionSelector = () => {
   const [selectedSection, setSelectedSection] = useState("All");
 
   return (
-    <div className="flex justify-between h-[31px] mt-8 px-4 md:hidden">
+    <div className="flex space-x-4 justify-between h-[31px] mt-8 px-4 md:hidden">
       {sectionItems.map((item, index) => {
         const styleInfo =
           selectedSection === item
@@ -15,7 +15,7 @@ const SectionSelector = () => {
         return (
           <div
             key={index}
-            className={`px-2 flex items-center justify-center cursor-pointer rounded-[4px] w-[62px] h-full text-[12px] font-medium ${styleInfo}`}
+            className={`px-2 flex w-full items-center justify-center cursor-pointer rounded-[4px] h-full text-[12px] font-medium ${styleInfo}`}
             onClick={() => setSelectedSection(item)}
           >
             {item}

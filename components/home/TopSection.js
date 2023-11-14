@@ -53,7 +53,7 @@ const TopSection = () => {
           <p className="text-primary1 font-bold text-[20px] w-full md:text-[47px] md:py-8 leading-tight md:w-[50%]">
             What do you want to learn today?
           </p>
-          <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-5 bg-secondaryShade5 w-full md:h-[57px] md:w-[40%]">
+          <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-5 bg-secondaryShade5 w-full md:mb-8 md:h-[57px] md:w-[40%]">
             <div className="h-full w-[18px] ml-4 mr-3">
               <Image
                 src={pinkSearchIcon}
