@@ -22,14 +22,13 @@ const Portal = (props) => {
   }
 
   return ReactDOM.createPortal(
-    <><div
-      className={`${inter.className} absolute top-0 h-screen w-full  bg-black opacity-60`}
-    >
-    
-    </div>
-    <div className=" z-40">{children}</div> 
+    <>
+      <div
+        className={`${inter.className} absolute top-0 h-screen w-full  bg-black opacity-60`}
+      ></div>
+      <div className=" z-40">{children}</div>
     </>,
-    
+
     document.getElementById("navigation")
   );
 };

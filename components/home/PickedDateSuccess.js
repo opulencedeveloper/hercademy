@@ -17,7 +17,7 @@ const PickedDateSuccess = ({ toggleDateSuccess }) => {
 
   return (
     <Portal>
-      <div className="w-[449px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+      <div className="w-[80%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 md:max-w-[449px]">
         <div className="flex items-center justify-center h-[143px] w-full bg-primary">
           <div className="flex items-center justify-center h-[89px] w-[89px] rounded-full border-[3px] border-white">
             {" "}
