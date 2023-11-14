@@ -82,7 +82,7 @@ const TechProgrammeDetail = () => {
           </div>
           <div className="flex justify-between items-center absolute top-6 left-4 right-4">
             {" "}
-            <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden ">
+            <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden md:h-[38px] md:w-[38px]">
               <Image
                 src={workspacePremiumIcon}
                 alt="premium icon"
@@ -93,7 +93,7 @@ const TechProgrammeDetail = () => {
                 className="h-full w-full"
               />
             </div>
-            <div className="h-[11px] w-[11px] rounded-[2px]">
+            <div className="h-[11px] w-[11px] rounded-[2px] md:h-[18px] md:w-[18px]">
               <Image
                 src={bookMarkWhiteIcon}
                 alt="book  mark icon"

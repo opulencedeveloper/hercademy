@@ -21,7 +21,7 @@ const UpcomingTechEvents = () => {
   const router = useRouter();
 
   return (
-    <section className="px-4 mb-7 my-7 md:my-9 md:px-0">
+    <section className="px-4 my-7 md:my-9 md:px-0">
       <div className="flex justify-between">
         <p className="text-primary1 text-[14px] font-semibold md:text-[24px]">
           Upcoming Tech Events

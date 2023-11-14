@@ -76,7 +76,7 @@ const Profile = () => {
               className="flex justify-between w-full items-center text-primary1 text-[16px] h-[24px]"
             >
               <p>{navIfo.title}</p>{" "}
-              {(index === 0 || index === 5) && (
+              {(index === 0 || index === 6) && (
                 <div className="h-[12.22px] w-[5.49px]">
                   <Image
                     src={angleRightIcon}
@@ -90,7 +90,7 @@ const Profile = () => {
                 </div>
               )}
             </button>
-            {activeIndex === index && (index === 0 || index === 5) ? (
+            {activeIndex === index && (index === 0 || index === 6) ? (
               navIfo.dropDown.map((data, index) => (
                 <button
                   key={index}

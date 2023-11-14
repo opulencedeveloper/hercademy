@@ -18,7 +18,7 @@ const TechProgrammes = () => {
   const router = useRouter();
 
   return (
-    <section className="my-10 md:px-32">
+    <section className="md:my-10 md:px-32">
       <p className="text-primary1 text-[14px] font-semibold px-4 pb-5 md:text-[24px] md:px-0 ">
       Available Tech Scholarships
         </p>
