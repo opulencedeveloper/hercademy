@@ -12,10 +12,9 @@ export default function Home() {
     setSelectedTab(val);
   };
   return (
-    <Layout navSwitcherHandler={navSwitcherHandler} selectedTab={selectedTab}>
-      {selectedTab === "Home" && <HomeTab />}
-      {selectedTab === "Explore" && <ExploreTab />}
-      {selectedTab === "Wishlist" && <WishListTab />}
+    <Layout>
+      {" "}
+      <HomeTab />
     </Layout>
   );
 }

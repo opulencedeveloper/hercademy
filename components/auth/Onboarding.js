@@ -40,7 +40,7 @@ const OnBoarding = ({ switcher }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between h-full gap-2 pb-7">
+    <div className="flex flex-col justify-between h-full gap-2 relative max-w-[40rem]  px-4 mx-auto scrollbar-hide overflow-y-auto mt-7 pb-20">
       <div className="flex justify-end mb-5">
         <button onClick={() => switcher("signup")} className="text-[16px]">
           Skip
@@ -94,10 +94,10 @@ const OnBoarding = ({ switcher }) => {
         })}
       </div>
       <div className="space-y-5">
-        <button className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+        <button onClick={() => switcher("signin")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
           Login
         </button>
-        <button className="text-center border border-secondaryShade1 h-[43px] rounded-[8px] w-full text-primary font-semibold">
+        <button onClick={() => switcher("signup")} className="text-center border border-secondaryShade1 h-[43px] rounded-[8px] w-full text-primary font-semibold">
           Get Started
         </button>
       </div>

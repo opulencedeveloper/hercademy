@@ -1,12 +1,13 @@
 import { useState } from "react";
-import classNames from "classnames";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import classNames from "classnames";
 
 import angleRightIcon from "../../public/asset/icons/angle-right-icon.svg";
 import angleLeftIcon from "../../public/asset/icons/angle-left-icon.svg";
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 
-import Portal from "../UI/Portal";
 import PickedDateSuccess from "./PickedDateSuccess";
 
 const availableTime = ["9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM"];
@@ -16,12 +17,11 @@ const Calender = (props) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState("9:00 AM");
   const [isSaveDate, setIsSaveDate] = useState(false);
-
-  const { toggleCalenderHandler } = props;
+  const router = useRouter();
 
   const toggleDateSuccess = () => {
-    setIsSaveDate(prev => !prev);
-  }
+    setIsSaveDate((prev) => !prev);
+  };
 
   const handleDateClick = (date) => {
     if (date.getMonth() < currentMonth.getMonth()) {
@@ -172,12 +172,12 @@ const Calender = (props) => {
         currentMonth.getMonth(),
         day
       );
-      const isToday = date.toDateString() === new Date().toDateString();
+      const isToday = date.toDateString() === new Date().toDateString(); 
       const isSelected =
         selectedDate && date.toDateString() === selectedDate.toDateString();
 
       const dayClass = classNames(
-        "flex justify-center items-center rounded-[6px] pt-1 cursor-pointer h-[32px] w-[32px] text-[15px]",
+        "flex justify-center items-center rounded-[6px] pt-0.5 cursor-pointer h-[32px] w-[32px] text-[15px]",
         {
           "text-primary1": !isSelected && !isToday,
           "bg-blue-500 text-white": isSelected && !isToday,
@@ -202,10 +202,10 @@ const Calender = (props) => {
   };
 
   return (
-    <Portal>
-      <div className="flex flex-col px-4 pb-4 h-full bg-white">
+    <>
+      <div className="flex flex-col px-4 pb-4 h-screen overflow-hidden pt-14 max-w-[524px] mx-auto bg-white">
         <div className="flex items-center pb-5">
-          <button onClick={toggleCalenderHandler} className="h-[14px] w-[14px]">
+          <button onClick={() => router.back()} className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
             <Image
               src={arrowBackIcon}
               alt="back icon"
@@ -244,13 +244,18 @@ const Calender = (props) => {
               })}
             </div>
           </div>
-          <button onClick={toggleDateSuccess} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+          <button
+            onClick={toggleDateSuccess}
+            className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold"
+          >
             Save Date
           </button>
         </div>
       </div>
-      {isSaveDate && <PickedDateSuccess toggleDateSuccess={toggleDateSuccess} />}
-    </Portal>
+      {isSaveDate && (
+        <PickedDateSuccess toggleDateSuccess={toggleDateSuccess} />
+      )}
+    </>
   );
 };
 

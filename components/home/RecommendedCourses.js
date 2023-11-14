@@ -31,27 +31,35 @@ const recommendedCourses = [
     subTitle: "Front-end Development Beginners Guide",
     duration: "3weeks",
   },
-  ,
+  {
+    id: "c4",
+    image: webDevImage,
+    titleIcon: googleIcon,
+    title: "Google",
+    subTitle: "Front-end Development Beginners Guide",
+    duration: "3weeks",
+  },
+  
 ];
 
 const RecommendedCourses = () => {
   const router = useRouter();
 
   return (
-    <section className="mt-7 px-4">
-      <p className="text-primary1 text-[14px] font-semibold">
+    <section className="flex flex-col mt-7 px-4 md:px-0">
+      <p className="text-primary1 text-[14px] font-semibold md:text-[24px]">
         Recommended Courses
       </p>
-      <div className="flex overflow-x-auto scrollbar-hide space-x-3 mt-3">
+      <div className="flex overflow-x-auto scrollbar-hide rounded-[8px] space-x-3 mt-3">
         {recommendedCourses.map((courseInfo, index) => (
           <div
             key={index}
             onClick={() =>
               router.push(`/recommendedcoursesdetails/${courseInfo.id}`)
             }
-            className="w-[185px] flex-shrink-0 rounded-[4px] overflow-hidden cursor-pointer"
+            className="w-[185px] flex-shrink-0 rounded-[4px] overflow-hidden cursor-pointer md:w-[284px]"
           >
-            <div className="h-[107px] bg-green-200 w-full overflow-hidden">
+            <div className="h-[107px] bg-green-200 w-full overflow-hidden md:h-[158px]">
               <Image
                 src={courseInfo.image}
                 alt="Course Info"
@@ -64,10 +72,10 @@ const RecommendedCourses = () => {
             </div>
             <div className="w-full bg-secondaryShade1 py-2 px-2.5">
               <div className="flex space-x-1.5 mb-0.5 ">
-                <div className="h-[14px] w-[14px]">
+                <div className="h-[14px] w-[14px] md:h-[18px] md:w-[18px]">
                   <Image
                     src={courseInfo.titleIcon}
-                    alt="google icon"
+                    alt="course icon"
                     height={14}
                     width={14}
                     priority
@@ -75,17 +83,17 @@ const RecommendedCourses = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <p className="text-[10px]">{courseInfo.title}</p>
+                <p className="text-[10px] md:text-[12px]">{courseInfo.title}</p>
               </div>
-              <p className="font-semibold text-[10px] leading-tight">
+              <p className="font-semibold text-[10px] leading-tight md:text-[12px]">
                 {courseInfo.subTitle}
               </p>
               <div className="flex items-center gap-1.5 mt-0.5">
-                <p className="text-[10px]">Beginner</p>
+                <p className="text-[10px] md:text-[12px]">Beginner</p>
                 <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-                <p className="text-[10px]">Course</p>
+                <p className="text-[10px] md:text-[12px]">Course</p>
                 <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-                <p className="text-[10px]">{courseInfo.duration}</p>
+                <p className="text-[10px] md:text-[12px]">{courseInfo.duration}</p>
               </div>
             </div>
           </div>

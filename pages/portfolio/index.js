@@ -10,7 +10,7 @@ const Portfolio = () => {
     <section className="flex flex-col space-y-5 h-screen justify-between px-4 py-10">
       <div>
         <div className="flex items-center pb-5">
-          <button onClick={() => router.back()} className="h-[14px] w-[14px]">
+          <button onClick={() => router.back()} className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
             <Image
               src={arrowBackIcon}
               alt="back icon"

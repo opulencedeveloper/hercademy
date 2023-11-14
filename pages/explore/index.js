@@ -11,21 +11,60 @@ import productManagementImage from "../../public/asset/images/product-management
 import businessGrantImage from "../../public/asset/images/business-grant-image.svg";
 import scholarshipImage from "../../public/asset/images/scholarship-image.svg";
 import womenInTechImage from "../../public/asset/images/women-in-texh-image.svg";
-import moniePointWomenInTechImage from "../../public/asset/images/moniepoint-women-in-tech-image.svg"
+import moniePointWomenInTechImage from "../../public/asset/images/moniepoint-women-in-tech-image.svg";
 import learnTechImage from "../../public/asset/images/learn-tech-image.svg";
 import ihsWomenImage from "../../public/asset/images/ihs-women-image.svg";
+import Layout from "@/components/layout/Layout";
 
 const techEventImages = [techHerFirstImage, devfestImage, beyondInclusionImage];
 
-const upcomingBootcampsImages = [learnTechImage, ihsWomenImage, learnTechImage];
+const upcomingBootcampsImages = [
+  learnTechImage,
+  ihsWomenImage,
+  learnTechImage,
+  learnTechImage,
+  ihsWomenImage,
+  learnTechImage,
+  learnTechImage,
+  ihsWomenImage,
+  learnTechImage,
+];
 
 const empowerHerImages = [
   businessGrantImage,
   scholarshipImage,
   businessGrantImage,
+  businessGrantImage,
+  scholarshipImage,
+  businessGrantImage,
+  businessGrantImage,
+  scholarshipImage,
+  businessGrantImage,
+  businessGrantImage,
+  scholarshipImage,
+  businessGrantImage,
+  businessGrantImage,
+  scholarshipImage,
+  businessGrantImage,
+  businessGrantImage,
+  scholarshipImage,
+  businessGrantImage,
 ];
 
-const content2Images = [womenInTechImage, moniePointWomenInTechImage, womenInTechImage];
+const content2Images = [
+  womenInTechImage,
+  moniePointWomenInTechImage,
+  womenInTechImage,
+  womenInTechImage,
+  moniePointWomenInTechImage,
+  womenInTechImage,
+  womenInTechImage,
+  moniePointWomenInTechImage,
+  womenInTechImage,
+  womenInTechImage,
+  moniePointWomenInTechImage,
+  womenInTechImage,
+];
 
 const content = [
   {
@@ -42,15 +81,15 @@ const content = [
   },
 ];
 
-const ExploreTab = () => {
+const Explore = () => {
   return (
-    <>
-      <div className="px-4">
-        <p className="text-[16px] font-bold mb-1">Explore</p>
-        <p className="text-[12px] font-medium">
+    <Layout>
+      <div className="px-4 md:px-20 lg:px-32">
+        <p className="text-[16px] font-bold mb-1 md:text-[64px]">Explore</p>
+        <p className="text-[12px] font-medium md:text-[36px]">
           Keep learning and building more skills.
         </p>
-        <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-7 bg-secondaryShade5">
+        <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-7 bg-secondaryShade5 w-full md:h-[55px] md:w-1/2">
           <div className="h-[18px] w-[18px] ml-5 mr-3">
             <Image
               src={searchIcon}
@@ -77,8 +116,8 @@ const ExploreTab = () => {
             >
               {" "}
               <div className="flex justify-between items-center ">
-                <div className="flex space-x-3 items-center">
-                  <div className="h-[50px] w-[71px] rounded-[4px] overflow-hidden bg-slate-600">
+                <div className="flex space-x-3 items-center md:space-x-0 md:w-full">
+                  <div className="h-[50px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
                     <Image
                       src={data.image}
                       className="h-full w-full object-cover"
@@ -89,7 +128,9 @@ const ExploreTab = () => {
                       loading="eager"
                     />
                   </div>
-                  <p className="text-[16px] font-semibold">{data.title}</p>
+                  <p className="text-[16px] font-semibold md:text-[24px] md:w-full md:flex md:justify-center">
+                    {data.title}
+                  </p>
                 </div>
 
                 <div className="h-[12.22px] w-[5.49px]">
@@ -105,28 +146,30 @@ const ExploreTab = () => {
             </div>
           ))}
           <div className="flex justify-end mt-4">
-            <button className="text-primary font-semibold text-[12px]">
+            <button className="text-primary font-semibold text-[12px] md:text-[20px]">
               View all
             </button>
           </div>
         </div>
       </div>
-      <div className="flex items-start px-4 mt-11 justify-between">
+      <div className="flex items-start pl-4 mt-11 justify-between md:px-20 lg:px-32">
         <div>
-          <p className="font-semibold text-[16px]">Empower Her</p>
-          <p className="font-medium text-[12px] text-secondary">
+          <p className="font-semibold text-[16px] md:text-[24px]">
+            Empower Her
+          </p>
+          <p className="font-medium text-[12px] text-secondary md:text-[20px]">
             Female tech scholarships
           </p>
         </div>
-        <button className="text-primary font-semibold text-[12px]">
+        <button className="text-primary font-semibold text-[12px] md:text-[20px]">
           View all
         </button>
       </div>
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3 mb-10">
+      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3 mb-10 md:mx-20 lg:mx-32 md:space-x-8 md:h-[265px]">
         {empowerHerImages.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 rounded-[4px] overflow-hidden w-[125px] h-full"
+            className="flex-shrink-0 rounded-[4px] overflow-hidden w-[125px] h-full md:w-[272px] "
           >
             <Image
               src={image}
@@ -141,7 +184,10 @@ const ExploreTab = () => {
         ))}
       </div>
 
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3">
+      <p className="font-semibold pl-4 text-[16px] md:text-[24px] md:mt-14 md:pl-20 lg:pl-32">
+        Female Internship Roles In Tech
+      </p>
+      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3 md:mx-20 md:space-x-8 lg:mx-32">
         {content2Images.map((image, index) => (
           <div key={index} className="flex-shrink-0 w-[125px] h-full">
             <Image
@@ -157,13 +203,15 @@ const ExploreTab = () => {
         ))}
       </div>
 
-      <p className="font-semibold text-[16px] px-4 mt-7">Upcoming Bootcamps</p>
+      <p className="font-semibold text-[16px] px-4 mt-7 md:mt-14 md:text-[24px] md:px-20 lg:px-32">
+        Upcoming Bootcamps
+      </p>
 
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 pl-4 mt-4">
+      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-4 md:mt-6 md:space-x-8 md:h-[265px] md:mx-20 lg:mx-32">
         {upcomingBootcampsImages.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 rounded-[4px] overflow-hidden w-[125px] h-full"
+            className="flex-shrink-0 rounded-[4px] overflow-hidden w-[125px] h-full md:w-[272px]"
           >
             <Image
               src={image}
@@ -177,8 +225,8 @@ const ExploreTab = () => {
           </div>
         ))}
       </div>
-    </>
+      </Layout>
   );
 };
 
-export default ExploreTab;
+export default Explore;

@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-import Layout from "@/components/layout/Layout";
-
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import googleIcon from "../../public/asset/icons/google-icon.svg";
 import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
@@ -79,7 +77,7 @@ const sectionContent = [
   },
 ];
 
-const recommendedCourses = [
+const coursesrecommended = [
   {
     id: "c1",
     image: webDevImage,
@@ -104,7 +102,14 @@ const recommendedCourses = [
     subTitle: "Front-end Development Beginners Guide",
     duration: "3weeks",
   },
-  ,
+  {
+    id: "c4",
+    image: webDevImage,
+    titleIcon: googleIcon,
+    title: "Google",
+    subTitle: "Front-end Development Beginners Guide",
+    duration: "3weeks",
+  },
 ];
 
 const RecommendedCourses = () => {
@@ -113,10 +118,15 @@ const RecommendedCourses = () => {
 
   if (!courseId) return;
 
-  const courseDetails = recommendedCourses.find((item) => item.id === courseId);
+  const courseDetails = coursesrecommended.find(
+    (courseData) => courseData.id === courseId
+  );
+
+  if (!courseDetails) return <p>Page not found</p>;
+  
   return (
-    <section className="relative max-w-[40rem] h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
-      <button className="h-[14px] w-[14px] ml-4">
+    <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-10 pb-2">
+      <button className="h-[14px] w-[14px] ml-4 md:ml-20 md:h-[24px] md:w-[24px] lg:ml-32">
         <Image
           src={arrowBackIcon}
           onClick={() => router.back()}
@@ -126,10 +136,10 @@ const RecommendedCourses = () => {
           priority
         />
       </button>
-      <section className="px-4 mt-2">
+      <section className="px-4 mt-2 md:px-20 lg:px-32">
         {" "}
         <div className="w-full flex-shrink-0 rounded-[4px] overflow-hidden mb-5">
-          <div className="h-[192px] bg-green-200 w-full overflow-hidden">
+          <div className="h-[192px] bg-green-200 w-full overflow-hidden md:h-[563px]">
             <Image
               src={courseDetails.image}
               alt={courseDetails.title}
@@ -138,9 +148,9 @@ const RecommendedCourses = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="w-full bg-secondaryShade1 pt-3 pb-2 px-3">
-            <div className="flex space-x-1.5 mb-0.5 w-1/3">
-              <div className="h-[14px] w-[14px]">
+          <div className="w-full bg-secondaryShade1 pt-3 pb-2 px-3 md:px-7 md:py-6">
+            <div className="flex items-center space-x-1.5 mb-0.5 w-1/3">
+              <div className="h-[14px] w-[14px] md:h-[26px] md:w-[26px]">
                 <Image
                   src={courseDetails.titleIcon}
                   alt="google icon"
@@ -149,24 +159,24 @@ const RecommendedCourses = () => {
                   className="w-full h-full"
                 />
               </div>
-              <p className="text-[10px]">{courseDetails.title}</p>
+              <p className="text-[10px] md:text-[20px]">{courseDetails.title}</p>
             </div>
-            <p className="font-semibold text-[10px] leading-tight w-1/2">
+            <p className="font-semibold text-[10px] leading-tight w-1/2 md:text-[24px]">
               {courseDetails.subTitle}
             </p>
             <div className="flex items-center gap-1.5 mt-0.5">
-              <p className="text-[10px]">Beginner</p>
+              <p className="text-[10px] md:text-[20px]">Beginner</p>
               <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-              <p className="text-[10px]">Course</p>
+              <p className="text-[10px] md:text-[20px]">Course</p>
               <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-              <p className="text-[10px]">{courseDetails.duration}</p>
+              <p className="text-[10px] md:text-[20px]">{courseDetails.duration}</p>
             </div>
           </div>
         </div>{" "}
-        <div className="flex justify-between mb-7">
+        <div className="flex justify-between mb-7 md:px-20">
           {sectionNav.map((navData, index) => (
             <div key={index} className="flex flex-col items-center space-y-2">
-              <div className="h-[23px] w-[23px]">
+              <div className="h-[23px] w-[23px] md:w-[40px] md:h-[40px]">
                 <Image
                   src={navData.icon}
                   alt={navData.title}
@@ -179,8 +189,8 @@ const RecommendedCourses = () => {
             </div>
           ))}
         </div>
-        <p className="font-bold text-[16px]">Course Content: 10 classes</p>
-        <p className="text-[14px] font-medium text-secondary mt-1">
+        <p className="font-bold text-[16px] md:text-[28px]">Course Content: 10 classes</p>
+        <p className="text-[14px] font-medium text-secondary mt-1 md:text-[20px]">
           Front-end development essentials course for beginners. Learn
           foundational skills...
         </p>
@@ -189,13 +199,13 @@ const RecommendedCourses = () => {
           {sectionContent.map((sectionData, index) => (
             <div
               key={index}
-              className="flex justify-between items-end bg-secondaryShade10 px-2.5 py-2 rounded-[4px]"
+              className="flex justify-between items-end bg-secondaryShade10 px-2.5 py-2 rounded-[4px] md:py-4 md:px-4"
             >
-              <div className="w-[82%]">
-                <p className="font-semibold text-[16px]">
+              <div className="w-[82%] md:w-[60%]">
+                <p className="font-semibold text-[16px] md:text-[24px]">
                   {sectionData.title}:
                 </p>
-                <p className="text-[13px]">{sectionData.description}</p>
+                <p className="text-[13px] md:text-[20px]">{sectionData.description}</p>
               </div>
               <div className="flex flex-col items-center mb-5">
                 <div className="flex-shrink-0 h-[32px] w-[32px]">

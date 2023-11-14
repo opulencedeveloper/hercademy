@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 import notificationIcon from "../../public/asset/icons/notifications-icon.svg";
 import avaterImage from "../../public/asset/images/avatar-image.svg";
 import pinkSearchIcon from "../../public/asset/icons/pink-search-icon.svg";
-import closeIcon from "../../public/asset/icons/close-icon.svg";
-import Portal from "../UI/Portal";
 import { useState } from "react";
 import Notification from "./Notification";
 
@@ -17,8 +15,8 @@ const TopSection = () => {
     setViewNotification(prev => !prev);
   }
 
-  return (<section className="px-4">
-        <div className="flex justify-between">
+  return (<section className="px-4 md:px-20 lg:px-32">
+        <div className="flex justify-between md:hidden">
           <p className="text-primary1 font-medium text-[20px]">Welcome Mary</p>
           <div className="flex items-center space-x-3 relative">
             <button className="h-[24px] w-[24px] relative" onClick={toggleNotifcation}>
@@ -51,11 +49,11 @@ const TopSection = () => {
           </div>
         </div>
 
-        <div className="rounded-[16px] bg-primaryShade1 pt-6 px-4 pb-4 mt-5">
-          <p className="text-primary1 font-bold text-[20px]">
+        <div className="flex flex-col rounded-[16px] bg-primaryShade1 pt-6 px-4 pb-4 mt-5 md:px-10 md:flex-row md:justify-between md:items-end">
+          <p className="text-primary1 font-bold text-[20px] w-full md:text-[47px] md:py-8 leading-tight md:w-[50%]">
             What do you want to learn today?
           </p>
-          <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-5 bg-secondaryShade5">
+          <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-5 bg-secondaryShade5 w-full md:h-[57px] md:w-[40%]">
             <div className="h-full w-[18px] ml-4 mr-3">
               <Image
                 src={pinkSearchIcon}
@@ -67,7 +65,7 @@ const TopSection = () => {
             </div>
             <input
               placeholder="Search"
-              className="h-full bg-transparent flex-1 outline-none placeholder-primaryShade2 placeholder-medium placeholder-[16px]"
+              className="h-full bg-transparent flex-1 outline-none placeholder-primaryShade2 placeholder-medium placeholder-[16px] md:placeholder-[40px]"
             />
           </div>
         </div>

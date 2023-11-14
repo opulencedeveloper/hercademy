@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import googleIcon from "../../public/asset/icons/google-icon.svg";
 
@@ -8,6 +9,7 @@ const authInput = [
 ];
 
 const SignIn = ({switcher}) => {
+  const router = useRouter();
   return (
     <div className="flex flex-col text-center overflow-auto pt-14 pb-3 h-full">
       <p className="text-[24px] text-primary font-semibold mb-2">
@@ -39,8 +41,8 @@ const SignIn = ({switcher}) => {
           </div>
         </div>
         <div className="space-y-5">
-          <button className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
-            Sign up
+          <button onClick={() => router.push("/")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+            Sign in
           </button>
           <button className="flex items-center justify-center gap-5 border border-secondaryShade1 h-[43px] rounded-[8px] w-full text-primary font-semibold">
             <div className="h-[24px] w-[24px]">

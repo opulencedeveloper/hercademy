@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import homeIcon from "../../public/asset/icons/home-icon.svg";
 import inActiveHomeIcon from "../../public/asset/icons/inactive-home.svg";
@@ -7,38 +9,49 @@ import activeExploreIcon from "../../public/asset/icons/active-explore-icon.svg"
 import inactiveBookmarksIcon from "../../public/asset/icons/inactive-bookmarks-icon.svg";
 import activeBookmarksIcon from "../../public/asset/icons/active-bookmarks-icon.svg";
 
+
 const myNavigator = [
-  { activeIcon: homeIcon, inActiveIcon: inActiveHomeIcon, title: "Home" },
+  {
+    activeIcon: homeIcon,
+    inActiveIcon: inActiveHomeIcon,
+    title: "Home",
+    link: "/",
+  },
   {
     activeIcon: activeExploreIcon,
     inActiveIcon: inactiveExploreIcon,
     title: "Explore",
+    link: "/explore",
   },
   {
     activeIcon: activeBookmarksIcon,
     inActiveIcon: inactiveBookmarksIcon,
     title: "Wishlist",
+    link: "/wishlist",
   },
 ];
 
-const NavBar = (props) => {
-  const { selectedTab, navSwitcherHandler } = props;
+const MobileTabBar = () => {
+  const router = useRouter(); 
+  console.log(router.pathname);
+
+  const activeLink = router.pathname;
   return (
-    <div className="absolute bottom-0 mx-4 w-full flex justify-between bg-secondaryShade6 z-20 py-4 px-8">
+    <div className="sticky bottom-0  w-full flex justify-between bg-secondaryShade6 z-20 py-4 px-8 md:hidden">
       {myNavigator.map((navInfo, index) => {
         const style =
-          selectedTab === navInfo.title ? "text-primary" : "text-primaryShade2";
+          activeLink === navInfo.link ? "text-primary" : "text-primaryShade2";
 
         return (
-          <div
+          <Link
+            href={navInfo.link}
             key={index}
-            onClick={() => navSwitcherHandler(navInfo.title)}
             className="flex flex-col justify-center items-center space-y-1 cursor-pointer"
           >
             <div className=" h-[24px] w-[24px]">
               <Image
                 src={
-                  selectedTab === navInfo.title
+                  activeLink === navInfo.link
                     ? navInfo.activeIcon
                     : navInfo.inActiveIcon
                 }
@@ -51,11 +64,11 @@ const NavBar = (props) => {
               />
             </div>
             <p className={`text-[12px] ${style}`}>{navInfo.title}</p>
-          </div>
+          </Link>
         );
       })}
     </div>
   );
 };
 
-export default NavBar;
+export default MobileTabBar;

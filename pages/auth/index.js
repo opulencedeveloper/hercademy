@@ -5,12 +5,13 @@ import SignUp from "@/components/auth/Signup";
 import SignIn from "@/components/auth/Signin";
 import { useState } from "react";
 import ChooseIntrest from "@/components/auth/ChooseIntrest";
+import LeftComponent from "@/components/auth/LeftComponent";
 
 export default function Home() {
   const [selectedComponent, setSelectedComponent] = useState("onboarding");
 
   const switcher = (val) => {
-    console.log(val)
+    console.log(val);
     setSelectedComponent(val);
   };
   let componentToRender;
@@ -20,16 +21,28 @@ export default function Home() {
       componentToRender = <OnBoarding switcher={switcher} />;
       break;
     case "signup":
-      componentToRender = <SignUp switcher={switcher} />;
+      componentToRender = (
+        <LeftComponent>
+          <SignUp switcher={switcher} />
+        </LeftComponent>
+      );
       break;
     case "signin":
-      componentToRender = <SignIn switcher={switcher} />;
+      componentToRender = (
+        <LeftComponent>
+          <SignIn switcher={switcher} />
+        </LeftComponent>
+      );
       break;
-      case "chooseintrest":
-        componentToRender = <ChooseIntrest switcher={switcher} />;
-        break;
+    case "chooseintrest":
+      componentToRender = (
+        <LeftComponent>
+          <ChooseIntrest switcher={switcher} />;
+        </LeftComponent>
+      );
+      break;
     default:
       componentToRender = <OnBoarding switcher={switcher} />;
   }
-  return <div className="relative max-w-[40rem] h-screen px-4 mx-auto scrollbar-hide overflow-y-auto mt-7 pb-20">{componentToRender}</div>;
+  return componentToRender;
 }

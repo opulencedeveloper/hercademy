@@ -68,7 +68,7 @@ const TechEventsGrid = () => {
   };
   return (
     <section className="flex flex-col h-full">
-      <div className="flex flex-shrink-0 items-center rounded-[8px] overflow-hidden h-[44px] mt-5 mb-2 bg-secondaryShade5">
+      <div className="flex flex-shrink-0 items-center rounded-[8px] overflow-hidden h-[44px] mt-5 mb-2 bg-secondaryShade5 md:h-[55px]">
         <div className="h-[18px] w-[18px] ml-5 mr-3">
           <Image
             src={searchIcon}
@@ -86,13 +86,13 @@ const TechEventsGrid = () => {
           className="h-full bg-transparent flex-1 outline-none placeholder-medium"
         />
       </div>
-      <div className="flex gap-1.5 justify-center flex-wrap pt-8 pb-40 scrollbar-hide overflow-auto">
+      <div className="flex gap-1.5 justify-center flex-wrap pt-8 pb-40 scrollbar-hide overflow-auto md:gap-5">
         {filterTechEvents.map((sectionData, index) => (
           <div
             key={index}
-            className="w-[167px] rounded-[8px] mb-6 overflow-hidden"
+            className="w-[167px] rounded-[8px] mb-6 overflow-hidden md:w-[350px]"
           >
-            <div className="relative h-[118px] w-full">
+            <div className="relative h-[118px] w-full md:h-[230px]">
               <Image
                 src={sectionData.image}
                 alt="avatar"
@@ -116,11 +116,11 @@ const TechEventsGrid = () => {
                 </div>
               )}
             </div>
-            <div className="h-[78px] w-full flex flex-col justify-between pt-1.5 pb-2 px-[5.5px] bg-secondaryShade10">
-              <p className="text-[14px] font-medium">{sectionData.title}</p>
-              <div className="flex w-full justify-between items-end">
-                <div className="flex relative w-14">
-                  <div className={"h-[18px] w-[18px]"}>
+            <div className="h-[78px] w-full flex flex-col justify-between pt-1.5 pb-2 px-[5.5px] bg-secondaryShade10 md:px-[10px] md:pb-2">
+              <p className="text-[14px] font-medium md:text-[22px]">{sectionData.title}</p>
+              <div className="flex w-full justify-between items-end ">
+                <div className="flex justify-end relative w-32">
+                  <div className={"absolute left-0 h-[18px] w-[18px] md:w-[22px] md:h-[22px]"}>
                     <Image
                       src={avatarOne}
                       alt="avatar"
@@ -131,7 +131,7 @@ const TechEventsGrid = () => {
                       className="w-full h-full"
                     />
                   </div>
-                  <div className={"absolute left-[10px] h-[18px] w-[18px]"}>
+                  <div className={"absolute left-[10px] h-[18px] w-[18px] md:w-[22px] md:h-[22px]"}>
                     <Image
                       src={avatarTwo}
                       alt="avatar"
@@ -142,7 +142,7 @@ const TechEventsGrid = () => {
                       className="w-full h-full"
                     />
                   </div>
-                  <div className={"absolute left-[20px] h-[18px] w-[18px]"}>
+                  <div className={"absolute left-[20px] h-[18px] w-[18px] md:w-[22px] md:h-[22px]"}>
                     <Image
                       src={avatarThree}
                       alt="avatar"
@@ -153,7 +153,7 @@ const TechEventsGrid = () => {
                       className="w-full h-full"
                     />
                   </div>
-                  <div className={"absolute left-[30px] h-[18px] w-[18px]"}>
+                  <div className={"absolute left-[30px] h-[18px] w-[18px] md:w-[22px] md:h-[22px]"}>
                     <Image
                       src={avatarFour}
                       alt="avatar"
@@ -166,15 +166,16 @@ const TechEventsGrid = () => {
                   </div>
                   <div
                     className={
-                      "absolute left-[40px] flex items-center justify-center text-white h-[18px] w-[18px] bg-primary2 rounded-full text-[10px]"
+                      "absolute left-[40px] flex items-center justify-center text-white h-[18px] w-[18px] bg-primary2 rounded-full text-[10px] md:w-[22px] md:h-[22px]"
                     }
                   >
                     {sectionData.members}
                   </div>
+                  <p className="text-[10px] md:text-[14px]">members</p>
                 </div>
 
-                <p className="text-[10px]">members</p>
-                <button className="text-[8px] bg-white py-0.5 px-1.5 rounded-[4px]">
+                
+                <button className="text-[8px] bg-white py-0.5 px-1.5 rounded-[4px] md:text-[10px]">
                   Join group
                 </button>
               </div>
@@ -183,7 +184,7 @@ const TechEventsGrid = () => {
         ))}
       </div>
 
-      <button className="absolute bottom-5 flex items-center justify-center gap-3 bg-primary h-[43px] rounded-[8px] w-[92%] text-[16px] text-white font-medium">
+      <button className="absolute bottom-5 right-0 left-0 flex items-center justify-center gap-3 bg-primary h-[43px] rounded-[8px] w-full text-[16px] text-white font-medium max-w-[70rem] mx-auto md:text-[20px] md:h-[50px]">
             <div className="h-[14px] w-[14px]">
               <Image
                 src={addIcon}

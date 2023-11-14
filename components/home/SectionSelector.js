@@ -6,7 +6,7 @@ const SectionSelector = () => {
   const [selectedSection, setSelectedSection] = useState("All");
 
   return (
-    <div className="flex justify-between h-[31px] mt-8 px-4">
+    <div className="flex justify-between h-[31px] mt-8 px-4 md:hidden">
       {sectionItems.map((item, index) => {
         const styleInfo =
           selectedSection === item
