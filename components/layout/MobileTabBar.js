@@ -37,7 +37,7 @@ const MobileTabBar = () => {
 
   const activeLink = router.pathname;
   return (
-    <div className="sticky bottom-0  w-full flex justify-between bg-secondaryShade6 z-20 py-4 px-8 md:hidden">
+    <div className="fixed bottom-0 w-full flex justify-between bg-secondaryShade6 z-20 py-4 px-8 md:hidden">
       {myNavigator.map((navInfo, index) => {
         const style =
           activeLink === navInfo.link ? "text-primary" : "text-primaryShade2";
