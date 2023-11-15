@@ -22,7 +22,7 @@ const LeftComponent = ({ children }) => {
 and successful tech career guided by industry experts.</p>
         </div>
       </section>
-      <section className="w-full px-4 h-full md:w-1/2 md:px-32">{children}</section>
+      <section className="w-full px-4 h-full scrollbar-hide md:w-1/2 md:px-32">{children}</section>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import RecommendedCourses from "../home/RecommendedCourses";
 import SectionSelector from "../home/SectionSelector";
 import TechProgrammes from "../home/TechProgrammes";
@@ -12,6 +13,8 @@ const categories = [
   "Tech events",
   "Communities",
   "Portfolio",
+  "Mock Interview",
+  "CV Optimisation",
   "Tech scholarship",
 ];
 
@@ -30,11 +33,11 @@ const HomeTab = () => {
                 CATEGORIES
               </div>
             </div>
-            <div className="space-y-5 mt-5">
+            <div className=" space-y-5 mt-5">
               {categories.map((categoriesData, index) => (
-                <div key={index} className="font-medium text-[16px]">
+                <Link href="/portfolio" key={index} className="block font-medium text-[16px]">
                   {categoriesData}
-                </div>
+                </Link>
               ))}
             </div>
           </div>

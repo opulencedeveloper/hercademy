@@ -40,7 +40,7 @@ const OnBoarding = ({ switcher }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between h-full gap-2 relative max-w-[40rem]  px-4 mx-auto scrollbar-hide overflow-y-auto mt-12 pb-20">
+    <div className="flex flex-col justify-between h-full gap-2 relative max-w-[40rem] px-4 mx-auto scrollbar-hide overflow-y-auto pt-12 pb-20">
       <div className="flex justify-end mb-5">
         <button onClick={() => switcher("signup")} className="text-[16px]">
           Skip

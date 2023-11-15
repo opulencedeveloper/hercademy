@@ -85,8 +85,8 @@ const Explore = () => {
   return (
     <Layout>
       <div className="px-4 md:px-20 lg:px-32">
-        <p className="text-[16px] font-bold mb-1 md:text-[64px]">Explore</p>
-        <p className="text-[12px] font-medium md:text-[36px]">
+        <p className="text-[16px] font-bold mb-1 md:text-[60px]">Explore</p>
+        <p className="text-[12px] font-medium md:text-[32px]">
           Keep learning and building more skills.
         </p>
         <div className="flex items-center rounded-[8px] overflow-hidden h-[44px] mt-7 bg-secondaryShade5 w-full md:h-[55px] md:w-1/2">
@@ -112,41 +112,38 @@ const Explore = () => {
           {content.map((data, index) => (
             <div
               key={index}
-              className="border-b-[0.4px] border-secondaryShade2 pb-2 mt-6"
+              className="flex justify-between items-center mt-6 shadow-customShadow3 pr-2 overflow-hidden"
             >
-              {" "}
-              <div className="flex justify-between items-center ">
-                <div className="flex space-x-3 items-center md:space-x-0 md:w-full">
-                  <div className="h-[50px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
-                    <Image
-                      src={data.image}
-                      className="h-full w-full object-cover"
-                      alt="image"
-                      width={71}
-                      height={50}
-                      priority
-                      loading="eager"
-                    />
-                  </div>
-                  <p className="text-[16px] font-semibold md:text-[24px] md:w-full md:flex md:justify-center">
-                    {data.title}
-                  </p>
-                </div>
-
-                <div className="h-[12.22px] w-[5.49px]">
+              <div className="flex space-x-3 items-center md:space-x-0 md:w-full">
+                <div className="h-[50px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
                   <Image
-                    src={angleRightIcon}
-                    height={10}
-                    width={5}
-                    alt="angle right icon"
-                    className="w-full h-full"
+                    src={data.image}
+                    className="h-full w-full object-cover"
+                    alt="image"
+                    width={71}
+                    height={50}
+                    priority
+                    loading="eager"
                   />
                 </div>
+                <p className="text-[16px] font-semibold md:text-[20px] md:w-full md:flex md:justify-center">
+                  {data.title}
+                </p>
+              </div>
+
+              <div className="h-[12.22px] w-[5.49px]">
+                <Image
+                  src={angleRightIcon}
+                  height={10}
+                  width={5}
+                  alt="angle right icon"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           ))}
           <div className="flex justify-end mt-4">
-            <button className="text-primary font-semibold text-[12px] md:text-[20px]">
+            <button className="text-primary font-semibold text-[12px] md:text-[16px]">
               View all
             </button>
           </div>
@@ -161,7 +158,7 @@ const Explore = () => {
             Female tech scholarships
           </p>
         </div>
-        <button className="text-primary font-semibold text-[12px] md:text-[20px]">
+        <button className="text-primary font-semibold text-[12px] md:text-[16px]">
           View all
         </button>
       </div>
@@ -187,9 +184,9 @@ const Explore = () => {
       <p className="font-semibold pl-4 text-[16px] md:text-[24px] md:mt-14 md:pl-20 lg:pl-32">
         Female Internship Roles In Tech
       </p>
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3 md:mx-20 md:space-x-8 lg:mx-32">
+      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 rounded-[4px] mt-3 md:mx-20 md:space-x-8 md:h-[265px] lg:mx-32">
         {content2Images.map((image, index) => (
-          <div key={index} className="flex-shrink-0 w-[125px] h-full">
+          <div key={index} className="flex-shrink-0 w-[125px] rounded-[4px] overflow-hidden h-full md:w-[272px]">
             <Image
               src={image}
               alt="tech event"
@@ -225,7 +222,7 @@ const Explore = () => {
           </div>
         ))}
       </div>
-      </Layout>
+    </Layout>
   );
 };
 

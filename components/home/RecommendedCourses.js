@@ -39,7 +39,6 @@ const recommendedCourses = [
     subTitle: "Front-end Development Beginners Guide",
     duration: "3weeks",
   },
-  
 ];
 
 const RecommendedCourses = () => {
@@ -93,7 +92,9 @@ const RecommendedCourses = () => {
                 <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
                 <p className="text-[10px] md:text-[12px]">Course</p>
                 <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-                <p className="text-[10px] md:text-[12px]">{courseInfo.duration}</p>
+                <p className="text-[10px] md:text-[12px]">
+                  {courseInfo.duration}
+                </p>
               </div>
             </div>
           </div>

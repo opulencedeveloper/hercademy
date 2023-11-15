@@ -10,11 +10,12 @@ module.exports = {
       colors: {
         primary: "#950142",
         primaryShade1: "#F8ABCD",
-        primaryShade2: "#D6ADBF",
+        primaryShade2: "#D6ADBF", 
         primaryShade3: "#403131",
         primaryShade4: "#D6ADBF",
         primaryShade5: "#D9B4C5",
-        primary1: "#222B45",
+        primaryShade6: "#321320",
+        primary1: "#222B45",  
         primary2: "#02025F",
         secondary: "#3C3C3C",
         secondary2: "#73FF32",
@@ -36,6 +37,8 @@ module.exports = {
         customShadow: "0px 2px 2px 0px #00000040",
         customShadow1: "0px 4px 4px 0px #00000040",
         customShadow2: "0px 0px 12px 0px #0000000D",
+        customShadow3: "1px 1px 4px 0px #00000040",
+
       },
     },
   },

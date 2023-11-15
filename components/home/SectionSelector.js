@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const sectionItems = ["All", "Trainings", "Jobs", "Courses", "Blogs"];
+const sectionItems = ["Catergories", "Trainings", "Jobs", "Courses", "Blogs"];
 
 const SectionSelector = () => {
   const [selectedSection, setSelectedSection] = useState("All");

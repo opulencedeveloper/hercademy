@@ -1,3 +1,4 @@
+import DesktopFooter from "./DesktopFooter";
 import DesktopNavBar from "./DesktopNavBar";
 import MobileTabBar from "./MobileTabBar";
 
@@ -17,6 +18,7 @@ const Layout = (props) => {
           navSwitcherHandler={navSwitcherHandler}
           selectedTab={selectedTab}
         />
+        <DesktopFooter />
     </>
   );
 };

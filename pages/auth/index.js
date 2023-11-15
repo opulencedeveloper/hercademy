@@ -6,6 +6,7 @@ import SignIn from "@/components/auth/Signin";
 import { useState } from "react";
 import ChooseIntrest from "@/components/auth/ChooseIntrest";
 import LeftComponent from "@/components/auth/LeftComponent";
+import Splash from "@/components/auth/Splash";
 
 export default function Home() {
   const [selectedComponent, setSelectedComponent] = useState("onboarding");
@@ -44,5 +45,10 @@ export default function Home() {
     default:
       componentToRender = <OnBoarding switcher={switcher} />;
   }
-  return componentToRender;
+  return (
+    <div className="h-screen overflow-hidden">
+      {componentToRender}
+      <Splash />
+    </div>
+  );
 }
