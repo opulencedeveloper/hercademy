@@ -23,6 +23,8 @@ const TopSection = () => {
               <Image
                 src={notificationIcon}
                 alt="notification icon"
+                loading="eager"
+                priority
                 height={24}
                 width={24}
                 className="h-full w-full"
@@ -41,6 +43,8 @@ const TopSection = () => {
                 alt="avatar image"
                 height={34}
                 width={34}
+                loading="eager"
+                priority
                 className="h-full w-full"
               />
             </button>
@@ -60,6 +64,8 @@ const TopSection = () => {
                 alt="search icon"
                 height={18}
                 width={18}
+                loading="eager"
+                priority
                 className="w-full h-full"
               />
             </div>

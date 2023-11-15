@@ -102,19 +102,6 @@ const TechEventsGrid = () => {
                 loading="eager"
                 className="w-full h-full object-cover"
               />
-              {sectionData.premium && (
-                <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden absolute top-0 left-2">
-                  <Image
-                    src={workspacePremiumIcon}
-                    alt="premiun icon"
-                    priority
-                    loading="eager"
-                    height={24}
-                    width={24}
-                    className="h-full w-full"
-                  />
-                </div>
-              )}
             </div>
             <div className="h-[78px] w-full flex flex-col justify-between pt-1.5 pb-2 px-[5.5px] bg-secondaryShade10 md:px-[10px] md:pb-2">
               <p className="text-[14px] font-medium md:text-[22px]">{sectionData.title}</p>

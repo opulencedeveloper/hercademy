@@ -10,6 +10,11 @@ import Splash from "@/components/auth/Splash";
 
 export default function Home() {
   const [selectedComponent, setSelectedComponent] = useState("onboarding");
+  const [showSplash, setShowSplash] = useState(true);
+
+  const splashSwitcher = () => {
+    setShowSplash(prev => !prev);
+  }
 
   const switcher = (val) => {
     console.log(val);
@@ -48,7 +53,7 @@ export default function Home() {
   return (
     <div className="h-screen overflow-hidden">
       {componentToRender}
-      <Splash />
+      {showSplash && <Splash splashSwitcher={splashSwitcher}/>}
     </div>
   );
 }

@@ -6,12 +6,12 @@ import Portal from "../UI/Portal";
 
 const PickedDateSuccess = ({ toggleDateSuccess }) => {
   useEffect(() => {
-    const interval = setTimeout(() => {
+    const timeout = setTimeout(() => {
       toggleDateSuccess();
     }, 1000);
 
     return () => {
-      clearInterval(interval);
+      clearTimeout(timeout)
     };
   }, []);
 

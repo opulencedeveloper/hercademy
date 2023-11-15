@@ -20,7 +20,7 @@ const sectionTwo = [
 
 const DesktopFooter = () => {
   return (
-    <footer className="pt-20 px-28 bg-primaryShade6">
+    <footer className="hidden md:block pt-20 px-28 bg-primaryShade6">
       <section className="flex justify-between">
         {" "}
         <div className="flex flex-col space-y-7">
