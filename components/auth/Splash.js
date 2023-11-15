@@ -19,7 +19,7 @@ const Splash = ({ splashSwitcher }) => {
   }, []);
   return (
     <div className="fixed top-0 right-0 h-screen w-full flex items-center justify-center bg-primaryShade6 overflow-hidden scrollbar-hide">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mb-8">
         <div className="flex items-end justify-center">
           <div className="h-[72px] w-[72px">
             <Image
