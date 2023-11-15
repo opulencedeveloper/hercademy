@@ -9,7 +9,7 @@ const Splash = ({ splashSwitcher }) => {
     document.body.classList.add("overflow-hidden");
 
     const timer = setTimeout(() => {
-      //splashSwitcher();
+      splashSwitcher();
     }, 5000);
 
     return () => {
