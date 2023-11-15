@@ -47,7 +47,7 @@ const SignUp = ({switcher}) => {
             <p>Sign up with Google</p>
           </button>
         </div>
-        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold">
+        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
           <p className="text-secondaryShade4">Already have an account? </p>{" "}
           <button onClick={() => switcher("signin")} className="text-primary"> 
             Sign in
