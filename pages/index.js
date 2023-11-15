@@ -14,21 +14,14 @@ export default function Home() {
 
   useEffect(() => {
 
-    const updateScreenWidth = () => {
+
       if (600 >= parseInt(window.innerWidth, 10)) {
         setSelectedComponent("onboarding");
       } else {
         setSelectedComponent("signin");
       }
-    };
+  
 
-    updateScreenWidth();
-
-    window.addEventListener("resize", updateScreenWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
   }, []);
 
   const splashSwitcher = () => {
