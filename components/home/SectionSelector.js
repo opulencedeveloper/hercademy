@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-const sectionItems = ["Catergories", "Trainings", "Jobs", "Courses", "Blogs"];
+const sectionItems = ["Categories", "Trainings", "Jobs", "Courses", "Blogs"];
 
 const SectionSelector = () => {
   const [selectedSection, setSelectedSection] = useState("All");
 
   return (
-    <div className="flex space-x-4 justify-between h-[31px] mt-8 px-4 md:hidden">
+    <div className="flex space-x-4 justify-between overflow-x-auto scrollbar-hide mx-4 h-[31px] mt-8 md:hidden">
       {sectionItems.map((item, index) => {
         const styleInfo =
           selectedSection === item

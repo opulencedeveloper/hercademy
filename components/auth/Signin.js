@@ -12,10 +12,10 @@ const SignIn = ({switcher}) => {
   const router = useRouter();
   return (
     <div className="flex flex-col text-center overflow-auto pt-14 pb-3 h-full">
-      <p className="text-[24px] text-primary font-semibold mb-2">
+      <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Welcome Back!{" "}
       </p>
-      <p className="text-[14px] text-secondaryShade3">Login to continue</p>
+      <p className="text-[14px] text-secondaryShade3 md:text-[16px]">Login to continue</p>
 
       <div className="flex flex-col gap-3 justify-between flex-1 mt-10">
         <div>
@@ -23,9 +23,8 @@ const SignIn = ({switcher}) => {
           <form className="flex flex-col space-y-6">
             {authInput.map((authInputData, index) => (
              <div className="flex flex-col items-start"> 
-                <label className="text-[12px] text-secondaryShade4" htmlFor={authInputData.placeholder}>{authInputData.placeholder}</label>
+                <label className="text-[12px] text-secondaryShade4 md:text-[16px]" htmlFor={authInputData.placeholder}>{authInputData.placeholder}</label>
                 <input
-                placeholder={authInputData.placeholder}
                 id={authInputData.placeholder}
                 key={index}
                 type={authInputData.type}
@@ -35,16 +34,16 @@ const SignIn = ({switcher}) => {
             ))}   
           </form>
           <div className="flex justify-end mt-1">
-            <button type="button" className="text-[12px]">
+            <button type="button" className="text-[12px] md:text-[16px]">
               Forgot password?
             </button>
           </div>
         </div>
         <div className="space-y-5">
-          <button onClick={() => router.push("/")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
-            Sign in
+          <button onClick={() => router.push("/home")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold md:text-[16px] md:h-[48px]">
+            Login
           </button>
-          <button className="flex items-center justify-center gap-5 border border-secondaryShade1 h-[43px] rounded-[8px] w-full text-primary font-semibold">
+          <button className="flex items-center justify-center gap-5 border border-secondaryShade1 h-[43px] rounded-[8px] w-full text-primary font-semibold md:h-[48px]">
             <div className="h-[24px] w-[24px]">
               <Image
                 src={googleIcon}
@@ -56,10 +55,10 @@ const SignIn = ({switcher}) => {
                 priority
               />
             </div>{" "}
-            <p>Sign up with Google</p>
+            <p className="md:text-[16px]">Sign up with Google</p>
           </button>
         </div>
-        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold">
+        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
           <p className="text-secondaryShade4">Don’t have an account? </p>{" "}
           <button onClick={() => switcher("signup")} className="text-primary">Sign Up</button>
         </div>{" "}

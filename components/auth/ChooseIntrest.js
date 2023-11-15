@@ -85,7 +85,7 @@ const ChooseIntrest = () => {
         ))}{" "}
       </div>
 
-      <button onClick={() => router.replace("/")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+      <button onClick={() => router.replace("/home")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
         Choose
       </button>
     </div>

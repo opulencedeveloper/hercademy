@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import logo from "../../public/asset/logo/hercademy-logo.svg";
 
 const navigationItems = [
-  { title: "Home", link: "/" },
+  { title: "Home", link: "/home" },
   { title: "Explore", link: "/explore" },
   { title: "Wishlist", link: "/wishlist" },
 ];

@@ -15,7 +15,7 @@ const myNavigator = [
     activeIcon: homeIcon,
     inActiveIcon: inActiveHomeIcon,
     title: "Home",
-    link: "/",
+    link: "/home",
   },
   {
     activeIcon: activeExploreIcon,

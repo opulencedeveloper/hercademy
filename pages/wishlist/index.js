@@ -6,7 +6,7 @@ import Layout from "@/components/layout/Layout";
 const WishList = () => {
   return (
     <Layout>
-      <section className="h-full scrollbar-hide flex pb-20 flex-col items-center justify-center max-w-[619px] px-8 mx-auto">
+      <section className="h-full scrollbar-hide flex py-20 flex-col items-center justify-center max-w-[619px] px-8 mx-auto">
         <div className="h-[180px] w-[180px] mb-20 md:h-[265.83px] md:w-[239.25px]">
           <Image src={contracttImage} className="h-full w-full" />
         </div>
@@ -23,7 +23,7 @@ const WishList = () => {
               loading="eager"
             />
           </div>
-          <p className="font-semibold text-[20px]">Create a new wish</p>
+          <p className="font-semibold text-[12px] md:text-[20px]">Create a new wish</p>
         </button>
       </section>{" "}
     </Layout>

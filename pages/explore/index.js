@@ -115,7 +115,7 @@ const Explore = () => {
               className="flex justify-between items-center mt-6 shadow-customShadow3 pr-2 overflow-hidden"
             >
               <div className="flex space-x-3 items-center md:space-x-0 md:w-full">
-                <div className="h-[50px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
+                <div className="h-[60px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
                   <Image
                     src={data.image}
                     className="h-full w-full object-cover"

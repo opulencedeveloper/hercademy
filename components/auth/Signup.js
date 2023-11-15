@@ -4,7 +4,7 @@ import googleIcon from "../../public/asset/icons/google-icon.svg";
 
 const authInput = [
   { type: "text", placeholder: "Full Name" },
-  { type: "email", placeholder: "email address" },
+  { type: "email", placeholder: "Email address" },
   { type: "password", placeholder: "Password" },
   { type: "password", placeholder: "Confirm Password" },
 ];
@@ -12,8 +12,8 @@ const authInput = [
 const SignUp = ({switcher}) => {
   return (
     <div className="flex flex-col text-center overflow-auto pt-20 pb-3 h-full">
-      <p className="text-[24px] text-primary font-semibold mb-2">Sign Up</p>
-      <p className="text-[14px] text-secondaryShade3">
+      <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">Sign Up</p>
+      <p className="text-[14px] text-secondaryShade3 md:text-[16px]">
         First create an account
       </p>
 
