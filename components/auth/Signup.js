@@ -11,7 +11,7 @@ const authInput = [
 
 const SignUp = ({switcher}) => {
   return (
-    <div className="flex flex-col text-center overflow-auto pt-20 pb-3 h-full">
+    <div className="flex flex-col text-center pt-20 pb-3 h-full">
       <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">Sign Up</p>
       <p className="text-[14px] text-secondaryShade3 md:text-[16px]">
         First create an account

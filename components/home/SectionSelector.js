@@ -3,7 +3,7 @@ import { useState } from "react";
 const sectionItems = ["Categories", "Trainings", "Jobs", "Courses", "Blogs"];
 
 const SectionSelector = () => {
-  const [selectedSection, setSelectedSection] = useState("All");
+  const [selectedSection, setSelectedSection] = useState("Categories");
 
   return (
     <div className="flex space-x-4 justify-between overflow-x-auto scrollbar-hide mx-4 h-[31px] mt-8 md:hidden">

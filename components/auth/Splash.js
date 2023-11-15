@@ -6,11 +6,14 @@ import logo from "../../public/asset/logo/hercademy-logo.svg";
 
 const Splash = ({ splashSwitcher }) => {
   useEffect(() => {
+    document.body.classList.add("overflow-hidden");
+    
     const timer = setTimeout(() => {
       splashSwitcher();
     }, 5000);
 
     return () => {
+      document.body.classList.remove("overflow-hidden");
       clearTimeout(timer);
     };
   }, []);

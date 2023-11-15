@@ -34,7 +34,7 @@ const ChooseIntrest = () => {
   };
 
   return (
-    <div className="overflow-y-auto h-full text-center pt-14 pb-5">
+    <div className="h-full text-center pt-14 pb-5">
       <p className="text-[24px] text-primary font-semibold mb-2">
         Choose your Intrest
       </p>
