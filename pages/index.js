@@ -67,8 +67,7 @@ export default function Home() {
         </LeftComponent>
       );
       break;
-    default:
-      componentToRender = <OnBoarding switcher={switcher} />;
+    default: null
   }
   return (
     <div className="h-screen overflow-hidden">
