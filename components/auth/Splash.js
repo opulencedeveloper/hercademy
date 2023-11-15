@@ -7,7 +7,7 @@ import logo from "../../public/asset/logo/hercademy-logo.svg";
 const Splash = ({ splashSwitcher }) => {
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
-    
+
     const timer = setTimeout(() => {
       splashSwitcher();
     }, 5000);
@@ -30,9 +30,9 @@ const Splash = ({ splashSwitcher }) => {
               className="w-full h-full"
             />
           </div>
-          <p className="font-extrabold text-[32px] text-white">HERCADEMY</p>
+          <p className="font-extrabold text-[22px] text-white md:text-[32px]">HERCADEMY</p>
         </div>
-        <p className="text-[24px] font-medium italic text-white ml-2">
+        <p className="text-[14px] font-medium italic text-white ml-2 md:text-[24px]">
           Giving her a chance to thrive
         </p>
       </div>
