@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -5,7 +7,6 @@ import googleIcon from "../../public/asset/icons/google-icon.svg";
 import obsurePasswordIcon from "../../public/asset/icons/obsure-password-icon.svg";
 import nonObsurePasswordIcon from "../../public/asset/icons/non-obsure-password-icon.svg";
 
-import { useState } from "react";
 
 const authInput = [
   { type: "text", placeholder: "Email or Username" },
@@ -15,6 +16,13 @@ const authInput = [
 const SignIn = ({ switcher }) => {
   const router = useRouter();
   const [obsureText, setObsureText] = useState(true);
+
+  useEffect(() => {
+    const flag = localStorage.getItem("editareaofintrest");
+    if (flag === "2") {
+      localStorage.setItem("editareaofintrest", "0");
+    }
+  }, []);
 
   return (
     <div className="flex flex-col text-center pt-14 pb-3 h-full ">

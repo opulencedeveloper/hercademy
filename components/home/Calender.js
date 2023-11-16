@@ -6,7 +6,6 @@ import classNames from "classnames";
 
 import angleRightIcon from "../../public/asset/icons/angle-right-icon.svg";
 import angleLeftIcon from "../../public/asset/icons/angle-left-icon.svg";
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 
 import PickedDateSuccess from "./PickedDateSuccess";
 
@@ -205,17 +204,7 @@ const Calender = (props) => {
     <>
       <div className="flex flex-col px-4 pb-4 h-screen overflow-hidden pt-7 max-w-[524px] mx-auto bg-white">
         <div className="flex items-center pb-5">
-          <button onClick={() => router.back()} className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
-            <Image
-              src={arrowBackIcon}
-              alt="back icon"
-              className="h-full w-full"
-              height={14}
-              width={14}
-              loading="eager"
-              priority
-            />
-          </button>
+          
           <div className="flex flex-1 justify-center text-[20px] font-bold">
             Save Date
           </div>

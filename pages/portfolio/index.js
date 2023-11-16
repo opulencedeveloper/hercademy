@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import dishaImage from "../../public/asset/images/disha-image.svg";
 
 import Loading from "@/components/UI/Loading";
@@ -19,20 +18,10 @@ const Portfolio = () => {
   return showLoading ? (
     <Loading loadingSwitcher={loadingSwitcher} /> 
   ) :  (
-    <section className="flex flex-col space-y-5 h-screen justify-between px-4 py-10 md:px-20 lg:px-32">
+    <section className="flex flex-col space-y-5 h-screen justify-between px-4 py-10 max-w-[80rem] mx-auto md:px-20 lg:px-32">
       <div>
         <div className="flex items-center pb-5">
-          <button onClick={() => router.back()} className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
-            <Image
-              src={arrowBackIcon}
-              alt="back icon"
-              className="h-full w-full"
-              height={14}
-              width={14}
-              loading="eager"
-              priority
-            />
-          </button>
+          
           <div className="flex flex-1 justify-center text-[20px] font-semibold md:text-[38px]">
             Portfolio
           </div>

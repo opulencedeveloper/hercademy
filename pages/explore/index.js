@@ -29,20 +29,26 @@ const techEventImages = [techHerFirstImage, devfestImage, beyondInclusionImage];
 const upcomingBootcampsImages = [
   learnTechImage,
   image10,
-  ihsWomenImage
+  ihsWomenImage,
+  learnTechImage,
+  image10,
+  ihsWomenImage,
 ];
 
 const empowerHerImages = [
   businessGrantImage,
   scholarshipImage,
   image4,
-  image8
+  image8,businessGrantImage
 ];
 
 const content2Images = [
   womenInTechImage,
   moniePointWomenInTechImage,
-  image9
+  image9,
+  womenInTechImage,
+  moniePointWomenInTechImage,
+  image9,
 ];
 
 const content = [

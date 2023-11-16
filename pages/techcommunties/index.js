@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import TechCommuntiesGrid from "@/components/techcommunity/TechCommuntiesGrid";
 import Loading from "@/components/UI/Loading";
 
@@ -21,17 +20,7 @@ const TechCommunties = () => {
   ) : (
     <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <section className="px-4 flex flex-col h-full overflow-hidden md:px-20 lg:px-32">
-        {" "}
-        <button className="h-[14px] w-[14px] md:h-[24px] md:w-[24px]">
-          <Image
-            src={arrowBackIcon}
-            onClick={() => router.back()}
-            alt="back icon"
-            className="h-full w-full"
-            loading="eager"
-            priority
-          />
-        </button>
+        
         <p className="font-semibold text-[16px] mt-4 md:text-[32px]">
           Explore Our Tech Communties
         </p>

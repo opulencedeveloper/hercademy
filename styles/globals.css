@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 
+/* globals.css */
+
+/* 
+[data-theme='dark'] {
+  --bg-color: #1a0404;
+  --text-color: #333333
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
+
+
+
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -15,8 +31,26 @@
   }
 }
 
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animateSlideUp {
   animation-name: slide-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.animateSlideDown {
+  animation-name: slide-down;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }

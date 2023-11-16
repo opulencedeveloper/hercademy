@@ -11,7 +11,7 @@ const ChangeAreaOfIntrest = ({ toggleAreaOfIntrest }) => {
       <div className="flex flex-col items-center justify-center px-4 w-full h-full animateSlideUp bg-white rounded-sm">  <p className="text-center text-[17px] leading-tight font-medium md:text-[32px] md:leading-10">
           Do you wish to change your area of interest?
         </p>
-        <div className="w-[90%] mt-[50px] space-y-2 md:space-y-1 md:mt-[89px]">
+        <div className="w-[90%] mt-[50px] space-y-2 md:space-y-2 md:mt-[89px]">
           <button
             onClick={() => {
               localStorage.setItem("editareaofintrest", "1");

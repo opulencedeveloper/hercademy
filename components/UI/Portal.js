@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Portal = (props) => {
   const [mounted, setMounted] = useState(false);
-  const { children } = props;
+  const { children, togglePortalHandler } = props;
 
   useEffect(() => {
     setMounted(true);
@@ -25,9 +25,10 @@ const Portal = (props) => {
     <>
       
       <div
-        className={`${inter.className} absolute top-0 h-screen w-full z-40 bg-black opacity-60`}
+      onClick={togglePortalHandler}
+        className={`${inter.className}  absolute top-0 h-screen w-full z-40 bg-black opacity-60`}
       ></div>
-      <div className="h-screen fixed top-0 w-full z-50">{children}</div>
+      <div className="h-max fixed top-1/2 w-full z-50">{children}</div>
     </>,
 
     document.getElementById("navigation")

@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-icon.svg";
 import bookMarkWhiteIcon from "../../public/asset/icons/bookmark-white-icon.svg";
 import PaymentSelection from "@/components/techtprogrammesdetails/PaymentSelection";
@@ -26,16 +25,7 @@ const TechProgrammeDetail = () => {
     <Loading loadingSwitcher={loadingSwitcher} /> 
   ) :  (
     <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
-      <button className="h-[14px] w-[14px] ml-4 md:h-[24px] md:w-[24px] md:ml-20 lg:ml-32">
-        <Image
-          src={arrowBackIcon}
-          onClick={() => router.back()}
-          alt="back icon"
-          className="h-full w-full"
-          loading="eager"
-          priority
-        />
-      </button>{" "}
+    
       <section className="px-4 mt-3 md:px-20 lg:px-32">
         <p className="text-[16px] font-semibold  md:text-[32px]">Get Certified!</p>
         <p className="text-[12px] text-secondary md:text-[17px]">

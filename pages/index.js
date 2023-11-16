@@ -27,6 +27,10 @@ export default function Home() {
       setMyFlag(true);
       setSelectedComponent("chooseintrest");
     }
+    if (flag === "2") {
+      setMyFlag(true);
+      setSelectedComponent("signin");
+    }
   }, []);
 
   const splashSwitcher = () => {

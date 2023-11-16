@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import googleIcon from "../../public/asset/icons/google-icon.svg";
 import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
 import webDevImage from "../../public/asset/images/become-web-dev-image.svg";
@@ -112,16 +111,7 @@ const RecommendedCourses = () => {
     <Loading loadingSwitcher={loadingSwitcher} /> 
   ) : (
     <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
-      <button className="h-[14px] w-[14px] ml-4 md:ml-20 md:h-[24px] md:w-[24px] lg:ml-32">
-        <Image
-          src={arrowBackIcon}
-          onClick={() => router.back()}
-          alt="back icon"
-          className="h-full w-full"
-          loading="eager"
-          priority
-        />
-      </button>
+      
       <section className="px-4 mt-2 md:px-20 lg:px-32">
         {" "}
         <div className="w-full flex-shrink-0 rounded-[4px] overflow-hidden mb-5">

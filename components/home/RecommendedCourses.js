@@ -27,6 +27,24 @@ const recommendedCourses = [
     duration: "3 months",
     link: "/getcertified",
   },
+  {
+    id: "c3",
+    image: webDevImage,
+    titleIcon: googleIcon,
+    title: "Google",
+    subTitle: "Front-end Development Beginners Guide",
+    duration: "3 weeks",
+    link: "/courseone",
+  },
+  {
+    id: "c4",
+    image: frontEndFundametalsImage,
+    titleIcon: hertechtrailIcon,
+    title: "Hertechtrail",
+    subTitle: "Fundaments of Front-end Development",
+    duration: "3 months",
+    link: "/getcertified",
+  },
 ];
 
 const RecommendedCourses = () => {
