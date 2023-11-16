@@ -4,8 +4,10 @@ import { useRouter } from "next/router";
 import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-icon.svg";
 import image4 from "../../public/asset/images/image-4.svg";
 import image5 from "../../public/asset/images/image-5.svg";
+import image6 from "../../public/asset/images/image-6.svg";
+import image7 from "../../public/asset/images/image-7.svg";
 
-const allAvailableTechScholarships = [image4, image4, image5];
+const allAvailableTechScholarships = [image4, image5, image6 , image7];
 
 const AvailableTechScholarships = () => {
   const router = useRouter();
