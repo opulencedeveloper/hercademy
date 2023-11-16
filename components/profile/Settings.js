@@ -30,12 +30,12 @@ const Settings = () => {
   };
 
   return (
-    <div className="rounded-[2px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 space-y-2 py-4 px-4 bg-white text-[16px] md:text-[28px]">
+    <div className="rounded-[2px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 space-y-2 py-4 px-4 bg-white text-[20px] md:text-[28px]">
       <div className="animateSlideUp w-full h-full"><p className="text-primary1 cursor-pointer">Language</p>
       <div className="relative text-primary1 cursor-pointer">
         <button onClick={showAppearanceToggle}>Appearance</button>
         {showAppearance && (
-          <div className="animateSlideDown rounded-[2px] absolute top-12 space-y-2 py-2 px-6 bg-white text-[16px] md:top-16 md:text-[28px]">
+          <div className="animateSlideDown rounded-[2px] absolute top-12 space-y-2 py-2 px-6 bg-white text-[20px] md:top-16 md:text-[28px]">
             <button
               onClick={() => {
                 showAppearanceToggle();

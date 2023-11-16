@@ -59,7 +59,7 @@ const Profile = () => {
     <div className="overflow-y-auto "><section className="relative max-w-[40rem] h-screen mx-auto pt-7 ">
       {showCourses && (
         <Portal togglePortalHandler={toggleCoursesHandler}>
-          <div className="rounded-[2px]  absolute w-[80%] top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 space-y-2 py-4 px-4 bg-white text-[16px] md:w-max md:text-[28px]">
+          <div className="rounded-[2px]  absolute w-[80%] top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 space-y-2 py-4 px-4 bg-white text-[20px] md:w-max md:text-[28px]">
             <div className="animateSlideUp w-full h-full"><p className="text-primary1 cursor-pointer">Ongoing courses</p>
             <p className="text-primary1 cursor-pointer">Completed courses</p></div>
           </div>
@@ -84,7 +84,7 @@ const Profile = () => {
         </div>
         <p className="font-semibold text-[16px] md:text-[24px]">Mary Jay</p>
         <p className="text-[12px] text-secondary mt-1 md:text-[14px]">iammaryjay@gmail.com</p>
-        <button className="h-[38px] w-full mt-14 mx-auto rounded-[8px] text-[20px] text-white bg-primary md:h-[48px] md:text-[24px]">
+        <button className="h-[38px] w-full mt-14 mx-auto rounded-[8px] text-[17px] text-white bg-primary md:h-[48px] md:text-[24px]">
           Hercademy For Business
         </button>{" "}
       </div>
