@@ -22,9 +22,9 @@ export default function Home() {
 
   useEffect(() => {
     const flag = localStorage.getItem("editareaofintrest");
+    console.log(flag);
     if (flag === "1") {
       setMyFlag(true);
-      localStorage.setItem("editareaofintrest", "0");
       setSelectedComponent("chooseintrest");
     }
   }, []);

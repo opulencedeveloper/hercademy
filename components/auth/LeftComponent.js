@@ -66,7 +66,8 @@ const LeftComponent = ({ children }) => {
                 {" "}
                 <Image
                   src={index === 0 ? welcomeImage : onBoardingtData.image}
-                  st
+                  loading="eager"
+                  priority
                   alt={onBoardingtData.title}
                   height={280}
                   width={343}
