@@ -25,7 +25,7 @@ const SignIn = ({ switcher }) => {
   }, []);
 
   return (
-    <div className="flex flex-col text-center pt-14 pb-3 h-full ">
+    <div className="animateSlideUp flex flex-col text-center pt-14 pb-3 h-full ">
       <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Welcome Back!{" "}
       </p>

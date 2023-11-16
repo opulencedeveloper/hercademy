@@ -18,7 +18,7 @@ const SignUp = ({ switcher }) => {
   const [obsureConfirmPassword, setObsureConfirmPassword] = useState(true);
 
   return (
-    <div className="flex flex-col text-center pt-20 pb-3 h-full">
+    <div className="animateSlideDown flex flex-col text-center pt-20 pb-3 h-full">
       <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Sign Up
       </p>

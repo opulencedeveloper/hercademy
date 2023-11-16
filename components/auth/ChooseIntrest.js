@@ -41,7 +41,7 @@ const ChooseIntrest = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between h-full text-center mb-12 py-14 pb-5">
+    <div className="animateSlideUp flex flex-col justify-between h-full text-center py-14 pb-5">
       <div>
         {" "}
         <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
@@ -103,8 +103,12 @@ const ChooseIntrest = () => {
       >
         Choose
       </button>
+      <div
+        className="flex-shrink-0 h-[43px] w-full"
+      >
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default ChooseIntrest;

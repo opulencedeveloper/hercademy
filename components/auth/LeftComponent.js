@@ -117,7 +117,7 @@ const LeftComponent = ({ children }) => {
             const width =
               index === activeIndex
                 ? "w-[58px] bg-primary"
-                : "w-[5px] bg-secondaryShade1";
+                : "w-[5px] bg-secondaryShade1"
             return (
               <div
                 key={index}

@@ -64,12 +64,12 @@ export default function Home() {
     case "chooseintrest":
       componentToRender = (
         <LeftComponent>
-          <ChooseIntrest switcher={switcher} />;
+          <ChooseIntrest switcher={switcher} />
         </LeftComponent>
       );
       break;
     default:
-      null;
+      null
   }
   return (
     <div className="h-screen overflow-hidden">
