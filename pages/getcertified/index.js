@@ -68,7 +68,7 @@ const TechProgrammeDetail = () => {
               <p className="text-[10px] md:text-[20px]">3 weeks</p>
             </div>
           </div>
-          <div className="flex justify-between items-center absolute top-6 left-4 right-4">
+          {/* <div className="flex justify-between items-center absolute top-6 left-4 right-4">
             {" "}
             <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden md:h-[38px] md:w-[38px]">
               <Image
@@ -92,7 +92,7 @@ const TechProgrammeDetail = () => {
                 className="h-full w-full"
               />
             </div>{" "}
-          </div>
+          </div> */}
         </div>
         <PaymentSelection />
       </section>
