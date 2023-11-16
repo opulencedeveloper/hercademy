@@ -14,6 +14,11 @@ import womenInTechImage from "../../public/asset/images/women-in-texh-image.svg"
 import moniePointWomenInTechImage from "../../public/asset/images/moniepoint-women-in-tech-image.svg";
 import learnTechImage from "../../public/asset/images/learn-tech-image.svg";
 import ihsWomenImage from "../../public/asset/images/ihs-women-image.svg";
+import image4 from "../../public/asset/images/image-4.svg";
+import image8 from "../../public/asset/images/image-8.svg";
+import image9 from "../../public/asset/images/image-9.svg";
+import image10 from "../../public/asset/images/image-10.svg";
+
 import Layout from "@/components/layout/Layout";
 import ChangeAreaOfIntrest from "@/components/explore/ChangeAreaOfIntrest";
 import { useState } from "react";
@@ -23,17 +28,21 @@ const techEventImages = [techHerFirstImage, devfestImage, beyondInclusionImage];
 
 const upcomingBootcampsImages = [
   learnTechImage,
+  image10,
   ihsWomenImage
 ];
 
 const empowerHerImages = [
   businessGrantImage,
   scholarshipImage,
+  image4,
+  image8
 ];
 
 const content2Images = [
   womenInTechImage,
   moniePointWomenInTechImage,
+  image9
 ];
 
 const content = [
@@ -62,7 +71,7 @@ const Explore = () => {
   const toggleAreaOfIntrest = () => {
     setAreaOfIntrest((prev) => !prev);
   };
-  
+
   return showLoading ? (
     <Loading loadingSwitcher={loadingSwitcher} /> 
   ) : (

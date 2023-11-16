@@ -10,6 +10,7 @@ import Splash from "@/components/auth/Splash";
 export default function Home() {
   const [selectedComponent, setSelectedComponent] = useState("onboarding");
   const [showSplash, setShowSplash] = useState(true);
+  const [myFlag, setMyFlag] = useState(false);
 
   useEffect(() => {
     if (600 >= parseInt(window.innerWidth, 10)) {
@@ -17,17 +18,15 @@ export default function Home() {
     } else {
       setSelectedComponent("signin");
     }
-
-
-}, []);
+  }, []);
 
   useEffect(() => {
     const flag = localStorage.getItem("editareaofintrest");
     if (flag === "1") {
+      setMyFlag(true);
       localStorage.setItem("editareaofintrest", "0");
       setSelectedComponent("chooseintrest");
     }
-    
   }, []);
 
   const splashSwitcher = () => {
@@ -71,7 +70,11 @@ export default function Home() {
   return (
     <div className="h-screen overflow-hidden">
       {componentToRender}
-      {showSplash && <Splash splashSwitcher={splashSwitcher} />}
+      {showSplash && !myFlag ? (
+        <Splash splashSwitcher={splashSwitcher} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

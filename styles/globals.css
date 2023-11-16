@@ -65,7 +65,7 @@ input[type="password"] {
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
-    height: 7px;
+    height: 5px;
   }
   
   ::-webkit-scrollbar-track {
