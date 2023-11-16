@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import logo from "../../public/asset/logo/hercademy-logo.svg";
+import NotifyandProfileBar from "../UI/NotifyandProfileBar";
 
 const navigationItems = [
   { title: "Home", link: "/home" },
@@ -39,9 +40,10 @@ const DesktopNavBar = () => {
             </Link>
           );
         })}
-        <button className="py-[16px] px-[30px] bg-primary shadow-customShadow1 rounded-[6px] text-white text-[14px] font-semibold">
+        {/* <button className="py-[16px] px-[30px] bg-primary shadow-customShadow1 rounded-[6px] text-white text-[14px] font-semibold">
           Get Started
-        </button>
+        </button> */}
+        <NotifyandProfileBar />
       </nav>
     </header>
   );

@@ -23,10 +23,11 @@ const Portal = (props) => {
 
   return ReactDOM.createPortal(
     <>
+      
       <div
-        className={`${inter.className} absolute top-0 h-screen w-full  bg-black opacity-60`}
+        className={`${inter.className} absolute top-0 h-screen w-full z-40 bg-black opacity-60`}
       ></div>
-      <div className="h-screen z-40">{children}</div>
+      <div className="h-screen fixed top-0 w-full z-50">{children}</div>
     </>,
 
     document.getElementById("navigation")

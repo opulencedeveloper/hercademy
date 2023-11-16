@@ -40,6 +40,7 @@ module.exports = {
         customShadow3: "1px 1px 4px 0px #00000040",
 
       },
+
     },
   },
   plugins: [],

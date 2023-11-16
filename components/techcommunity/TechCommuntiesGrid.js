@@ -55,7 +55,7 @@ const techEvents = [
   },
 ];
 
-const TechEventsGrid = () => {
+const TechCommuntiesGrid = () => {
   const [filterTechEvents, setFilterTechEvents] = useState(techEvents);
 
   const filterTechEventsHandler = (event) => {
@@ -189,4 +189,4 @@ const TechEventsGrid = () => {
   );
 };
 
-export default TechEventsGrid;
+export default TechCommuntiesGrid;

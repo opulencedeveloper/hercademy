@@ -3,7 +3,54 @@
 @tailwind utilities;
 
 
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateSlideUp {
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+/* styles.css */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Initial scale, normal size */
+  }
+  100% {
+    transform: scale(1.5); /* Final scale, 20% larger than normal size */
+  }
+}
+
+.zoom-in-out {
+  animation: zoomInOut 1s infinite alternate;
+}
+
+
+
+
+/* hide default password icon */
+input[type="password"] {
+    /* Use a transparent background to cover the default eye icon */
+    background-image: none;
+    padding-right: 5px; 
+  }
+  /* Target the password toggle icon specifically */
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-webkit-contacts-auto-fill-button,
+  input[type="password"]::-webkit-cr-inner-spin-button {
+    display: none;
+  }
+  
 
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -14,3 +61,23 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  

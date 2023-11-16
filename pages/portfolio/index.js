@@ -1,12 +1,24 @@
+import { useState } from "react";
+
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import dishaImage from "../../public/asset/images/disha-image.svg";
-import { useRouter } from "next/router";
+
+import Loading from "@/components/UI/Loading";
 
 const Portfolio = () => {
   const router = useRouter();
-  return (
+  const [showLoading, setShowLoading] = useState(true); 
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) :  (
     <section className="flex flex-col space-y-5 h-screen justify-between px-4 py-10 md:px-20 lg:px-32">
       <div>
         <div className="flex items-center pb-5">

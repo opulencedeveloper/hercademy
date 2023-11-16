@@ -1,15 +1,24 @@
+import { useState } from "react";
+
 import Image from "next/image";
-
-import Layout from "@/components/layout/Layout";
-
-import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
-import TechEventsGrid from "@/components/techevents/TechEventsGrid";
 import { useRouter } from "next/router";
 
-const TechEvents = () => {
-  const router = useRouter();
+import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
+import TechCommuntiesGrid from "@/components/techcommunity/TechCommuntiesGrid";
+import Loading from "@/components/UI/Loading";
 
-  return (
+
+const TechCommunties = () => {
+  const router = useRouter();
+  const [showLoading, setShowLoading] = useState(true); 
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) : (
     <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <section className="px-4 flex flex-col h-full overflow-hidden md:px-20 lg:px-32">
         {" "}
@@ -30,10 +39,10 @@ const TechEvents = () => {
           Stay connected to African Tech ladies of like minds, network,
           collaborate and work on projects together.{" "}
         </p>
-        <TechEventsGrid />
+        <TechCommuntiesGrid />
       </section>
     </div>
   );
 };
 
-export default TechEvents;
+export default TechCommunties;

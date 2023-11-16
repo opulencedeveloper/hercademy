@@ -5,33 +5,25 @@ import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-ico
 import image4 from "../../public/asset/images/image-4.svg";
 import image5 from "../../public/asset/images/image-5.svg";
 
-const techProgrammesInfo = [
-  { id: "p1", image: image4 },
-  { id: "p2", image: image5 },
-  { id: "p3", image: image4 },
-  { id: "p4", image: image5 },
-];
+const allAvailableTechScholarships = [image4, image4, image5];
 
-
-
-const TechProgrammes = () => {
+const AvailableTechScholarships = () => {
   const router = useRouter();
 
   return (
-    <section className="md:my-10 md:px-32">
+    <section id="d8" className="md:my-10 md:px-32">
       <p className="text-primary1 text-[14px] font-semibold px-4 pb-5 md:text-[24px] md:px-0 ">
-      Available Tech Scholarships
-        </p>
+        Available Tech Scholarships
+      </p>
 
-      <div className="flex space-x-3 scrollbar-hide overflow-x-auto rounded-[8px] h-[197px] pl-4 md:h-[265px] md:pl-0 md:space-x-9">
-        {techProgrammesInfo.map((techProgrammesData, index) => (
+      <div className="flex space-x-3 pb-1 overflow-x-auto rounded-[8px] h-[197px] pr-4 ml-4 md:h-[265px] md:ml-0 md:space-x-9">
+        {allAvailableTechScholarships.map((allAvailableTechScholarshipsImage, index) => (
           <div
             key={index}
-            onClick={() => router.push(`/techtprogrammesdetails/${techProgrammesData.id}`)}
-            className="relative h-full w-[185px] rounded-[4px] overflow-hidden flex-shrink-0 cursor-pointer md:w-[272px]"
+            className="relative h-full w-[185px] rounded-[4px] overflow-hidden flex-shrink-0 md:w-[272px]"
           >
             <Image
-              src={techProgrammesData.image}
+              src={allAvailableTechScholarshipsImage}
               alt="programme image"
               priority
               loading="eager"
@@ -57,4 +49,4 @@ const TechProgrammes = () => {
   );
 };
 
-export default TechProgrammes;
+export default AvailableTechScholarships;

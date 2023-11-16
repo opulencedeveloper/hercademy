@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -12,6 +14,8 @@ import bookmarkIcon from "../../public/asset/icons/bookmark-icon.svg";
 import downloadIcon from "../../public/asset/icons/download-icon.svg";
 import shareIcon from "../../public/asset/icons/share-icon.svg";
 import playRoundedIcon from "../../public/asset/icons/play-rounded-icon.svg";
+
+import Loading from "@/components/UI/Loading";
 
 const sectionNav = [
   {
@@ -114,17 +118,16 @@ const coursesrecommended = [
 
 const RecommendedCourses = () => {
   const router = useRouter();
-  const courseId = router.query.courseId;
-
-  if (!courseId) return;
-
-  const courseDetails = coursesrecommended.find(
-    (courseData) => courseData.id === courseId
-  );
-
-  if (!courseDetails) return <p>Page not found</p>;
   
-  return (
+  const [showLoading, setShowLoading] = useState(true); 
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) : (
     <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <button className="h-[14px] w-[14px] ml-4 md:ml-20 md:h-[24px] md:w-[24px] lg:ml-32">
         <Image
@@ -141,8 +144,8 @@ const RecommendedCourses = () => {
         <div className="w-full flex-shrink-0 rounded-[4px] overflow-hidden mb-5">
           <div className="h-[192px] bg-green-200 w-full overflow-hidden md:h-[563px]">
             <Image
-              src={courseDetails.image}
-              alt={courseDetails.title}
+              src={webDevImage}
+              alt="Front-end Development Beginners Guide Image"
               height={107}
               width={185}
               className="h-full w-full object-cover"
@@ -152,24 +155,24 @@ const RecommendedCourses = () => {
             <div className="flex items-center space-x-1.5 mb-0.5 w-1/3">
               <div className="h-[14px] w-[14px] md:h-[26px] md:w-[26px]">
                 <Image
-                  src={courseDetails.titleIcon}
+                  src={googleIcon}
                   alt="google icon"
                   height={14}
                   width={14}
                   className="w-full h-full"
                 />
               </div>
-              <p className="text-[10px] md:text-[20px]">{courseDetails.title}</p>
+              <p className="text-[10px] md:text-[20px]">Google</p>
             </div>
             <p className="font-semibold text-[10px] leading-tight w-1/2 md:text-[24px]">
-              {courseDetails.subTitle}
+              Front-end Development Beginners Guide
             </p>
             <div className="flex items-center gap-1.5 mt-0.5">
               <p className="text-[10px] md:text-[20px]">Beginner</p>
               <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
               <p className="text-[10px] md:text-[20px]">Course</p>
               <div className="flex-shrink-0 h-[3px] w-[3px] rounded-full bg-primaryShade3"></div>
-              <p className="text-[10px] md:text-[20px]">{courseDetails.duration}</p>
+              <p className="text-[10px] md:text-[20px]">3 weeks</p>
             </div>
           </div>
         </div>{" "}
@@ -189,7 +192,9 @@ const RecommendedCourses = () => {
             </div>
           ))}
         </div>
-        <p className="font-bold text-[16px] md:text-[28px]">Course Content: 10 classes</p>
+        <p className="font-bold text-[16px] md:text-[28px]">
+          Course Content: 10 classes
+        </p>
         <p className="text-[14px] font-medium text-secondary mt-1 md:text-[20px]">
           Front-end development essentials course for beginners. Learn
           foundational skills...
@@ -205,7 +210,9 @@ const RecommendedCourses = () => {
                 <p className="font-semibold text-[16px] md:text-[24px]">
                   {sectionData.title}:
                 </p>
-                <p className="text-[13px] md:text-[20px]">{sectionData.description}</p>
+                <p className="text-[13px] md:text-[20px]">
+                  {sectionData.description}
+                </p>
               </div>
               <div className="flex flex-col items-center mb-5">
                 <div className="flex-shrink-0 h-[32px] w-[32px]">

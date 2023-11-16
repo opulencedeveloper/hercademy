@@ -34,11 +34,11 @@ const ChooseIntrest = () => {
   };
 
   return (
-    <div className="h-full text-center py-14 pb-5">
-      <p className="text-[24px] text-primary font-semibold mb-2">
+    <div className="flex flex-col justify-between h-full text-center mb-12 py-14 pb-5">
+     <div> <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Choose your Intrest
       </p>
-      <p className="text-[16px] text-secondaryShade3">
+      <p className="text-[16px] text-secondaryShade3 md:text-[16px]">
         This will help us streamline your search to your area of interest.
       </p>
 
@@ -80,12 +80,13 @@ const ChooseIntrest = () => {
                 className="h-full w-full"
               />
             </div>
-            <p className="text-[16px] font-medium">{interestData}</p>
+            <p className="text-[16px] font-medium md:text-[19px]">{interestData}</p>
           </button>
         ))}{" "}
       </div>
+      </div>
 
-      <button onClick={() => router.replace("/home")} className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold">
+      <button onClick={() => router.replace("/home")} className="flex-shrink-0 text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold md:h-[50px] md:text-[19px]">
         Choose
       </button>
     </div>

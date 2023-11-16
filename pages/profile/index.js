@@ -7,6 +7,7 @@ import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
 import avaterImage from "../../public/asset/images/avatar-image.svg";
 import angleRightIcon from "../../public/asset/icons/angle-left-icon.svg";
 import { useState } from "react";
+import Loading from "@/components/UI/Loading";
 
 const navItems = [
   {
@@ -30,12 +31,19 @@ const Profile = () => {
   const router = useRouter();
 
   const [activeIndex, setActiveIndex] = useState();
+ const [showLoading, setShowLoading] = useState(true); 
 
   const handleToggle = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
-
-  return (
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) :  (
     <section className="relative max-w-[40rem] h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <button className="h-[14px] w-[14px] ml-4 md:h-[24px] md:w-[24px]">
         <Image

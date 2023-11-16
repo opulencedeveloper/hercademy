@@ -1,32 +1,30 @@
-import Image from "next/image";
+import { useState } from "react";
 
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 import arrowBackIcon from "../../public/asset/icons/arrow-back-icon.svg";
-import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
 import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-icon.svg";
 import bookMarkWhiteIcon from "../../public/asset/icons/bookmark-white-icon.svg";
 import PaymentSelection from "@/components/techtprogrammesdetails/PaymentSelection";
+import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
+import frontEndFundametalsImage from "../../public/asset/images/front-end-fundametals-image.svg";
 
-import image4 from "../../public/asset/images/image-4.svg";
-import image5 from "../../public/asset/images/image-5.svg";
-import { useRouter } from "next/router";
+import Loading from "@/components/UI/Loading";
 
-const techProgrammesInfo = [
-  { id: "p1", image: image4 },
-  { id: "p2", image: image5 },
-  { id: "p3", image: image4 },
-  { id: "p4", image: image5 },
-];
 
 const TechProgrammeDetail = () => {
   const router = useRouter(); 
-  const programmeId = router.query.programmeId;
 
-  if (!programmeId) return;
-
-  const programmesDetails = techProgrammesInfo.find((item) => item.id === programmeId);
-
-  return (
+  const [showLoading, setShowLoading] = useState(true); 
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) :  (
     <div className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
       <button className="h-[14px] w-[14px] ml-4 md:h-[24px] md:w-[24px] md:ml-20 lg:ml-32">
         <Image
@@ -47,8 +45,8 @@ const TechProgrammeDetail = () => {
         <div className="relative w-full flex-shrink-0 rounded-[8px] overflow-hidden mt-3 mb-8">
           <div className="h-[197px] bg-green-200 w-full overflow-hidden md:h-[563px]">
             <Image
-              src={programmesDetails.image}
-              alt="tech programme"
+              src={frontEndFundametalsImage}
+              alt="Fundaments of Front-end Development"
               height={107}
               width={185}
               priority

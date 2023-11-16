@@ -8,20 +8,26 @@ import LeftComponent from "@/components/auth/LeftComponent";
 import Splash from "@/components/auth/Splash";
 
 export default function Home() {
-  const [selectedComponent, setSelectedComponent] = useState();
+  const [selectedComponent, setSelectedComponent] = useState("onboarding");
   const [showSplash, setShowSplash] = useState(true);
 
+  useEffect(() => {
+    if (600 >= parseInt(window.innerWidth, 10)) {
+      setSelectedComponent("onboarding");
+    } else {
+      setSelectedComponent("signin");
+    }
+
+
+}, []);
 
   useEffect(() => {
-
-
-      if (600 >= parseInt(window.innerWidth, 10)) {
-        setSelectedComponent("onboarding");
-      } else {
-        setSelectedComponent("signin");
-      }
-  
-
+    const flag = localStorage.getItem("editareaofintrest");
+    if (flag === "1") {
+      localStorage.setItem("editareaofintrest", "0");
+      setSelectedComponent("chooseintrest");
+    }
+    
   }, []);
 
   const splashSwitcher = () => {
@@ -33,7 +39,6 @@ export default function Home() {
     setSelectedComponent(val);
   };
   let componentToRender;
-
 
   switch (selectedComponent) {
     case "onboarding":
@@ -60,7 +65,8 @@ export default function Home() {
         </LeftComponent>
       );
       break;
-    default: null
+    default:
+      null;
   }
   return (
     <div className="h-screen overflow-hidden">

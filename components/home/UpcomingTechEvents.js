@@ -9,36 +9,30 @@ const techEventImages = [
   techHerFirstImage,
   devfestImage,
   beyondInclusionImage,
-  techHerFirstImage,
-  devfestImage,
-  beyondInclusionImage,
-  techHerFirstImage,
-  devfestImage,
-  beyondInclusionImage,
 ];
 
 const UpcomingTechEvents = () => {
   const router = useRouter();
 
   return (
-    <section className="px-4 my-7 md:my-9 md:px-0">
-      <div className="flex justify-between">
+    <section id="d5" className="pl-4 my-7 md:my-9 md:px-0">
+      <div className="flex justify-between pr-4">
         <p className="text-primary1 text-[14px] font-semibold md:text-[24px]">
           Upcoming Tech Events
         </p>
         <button
-          onClick={() => router.push("/techevents")}
+          
           className="font-semibold text-primary text-[10px] md:text-[20px]"
         >
           View All
         </button>
       </div>
 
-      <div className="flex h-[111px] overflow-auto rounded-[8px] scrollbar-hide space-x-2 mt-3 md:h-[271px]">
+      <div className="flex h-[126px]  overflow-auto rounded-[8px] pb-1 pr-4 space-x-2 mt-3 md:h-[271px]">
         {techEventImages.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[110px] h-full relative md:w-[281px]"
+            className="flex-shrink-0 w-[125px] h-full relative md:w-[281px]"
           >
             <Image
               src={image}

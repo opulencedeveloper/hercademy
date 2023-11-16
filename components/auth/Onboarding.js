@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import image1 from "../../public/asset/images/image-1.svg";
 import image2 from "../../public/asset/images/image-2.svg";
-import image3 from "../../public/asset/images/image-2.svg";
+import image3 from "../../public/asset/images/image-3.svg";
 
 const onBoardingInfo = [
   {

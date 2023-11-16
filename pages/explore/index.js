@@ -15,55 +15,25 @@ import moniePointWomenInTechImage from "../../public/asset/images/moniepoint-wom
 import learnTechImage from "../../public/asset/images/learn-tech-image.svg";
 import ihsWomenImage from "../../public/asset/images/ihs-women-image.svg";
 import Layout from "@/components/layout/Layout";
+import ChangeAreaOfIntrest from "@/components/explore/ChangeAreaOfIntrest";
+import { useState } from "react";
+import Loading from "@/components/UI/Loading";
 
 const techEventImages = [techHerFirstImage, devfestImage, beyondInclusionImage];
 
 const upcomingBootcampsImages = [
   learnTechImage,
-  ihsWomenImage,
-  learnTechImage,
-  learnTechImage,
-  ihsWomenImage,
-  learnTechImage,
-  learnTechImage,
-  ihsWomenImage,
-  learnTechImage,
+  ihsWomenImage
 ];
 
 const empowerHerImages = [
   businessGrantImage,
   scholarshipImage,
-  businessGrantImage,
-  businessGrantImage,
-  scholarshipImage,
-  businessGrantImage,
-  businessGrantImage,
-  scholarshipImage,
-  businessGrantImage,
-  businessGrantImage,
-  scholarshipImage,
-  businessGrantImage,
-  businessGrantImage,
-  scholarshipImage,
-  businessGrantImage,
-  businessGrantImage,
-  scholarshipImage,
-  businessGrantImage,
 ];
 
 const content2Images = [
   womenInTechImage,
   moniePointWomenInTechImage,
-  womenInTechImage,
-  womenInTechImage,
-  moniePointWomenInTechImage,
-  womenInTechImage,
-  womenInTechImage,
-  moniePointWomenInTechImage,
-  womenInTechImage,
-  womenInTechImage,
-  moniePointWomenInTechImage,
-  womenInTechImage,
 ];
 
 const content = [
@@ -82,8 +52,24 @@ const content = [
 ];
 
 const Explore = () => {
-  return (
+  const [showAreaOfIntrest, setAreaOfIntrest] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
+  
+  const loadingSwitcher = () => {
+    setShowLoading((prev) => !prev);
+  };
+
+  const toggleAreaOfIntrest = () => {
+    setAreaOfIntrest((prev) => !prev);
+  };
+  
+  return showLoading ? (
+    <Loading loadingSwitcher={loadingSwitcher} /> 
+  ) : (
     <Layout>
+      {showAreaOfIntrest && (
+        <ChangeAreaOfIntrest toggleAreaOfIntrest={toggleAreaOfIntrest} />
+       )}
       <div className="px-4 md:px-20 lg:px-32">
         <p className="text-[16px] font-bold mb-1 md:text-[60px]">Explore</p>
         <p className="text-[12px] font-medium md:text-[32px]">
@@ -110,9 +96,10 @@ const Explore = () => {
 
         <div className="mt-7">
           {content.map((data, index) => (
-            <div
+            <button
+              onClick={toggleAreaOfIntrest}
               key={index}
-              className="flex justify-between items-center mt-6 shadow-customShadow3 pr-2 overflow-hidden"
+              className="flex justify-between items-center w-full mt-6 shadow-customShadow3 pr-2 overflow-hidden"
             >
               <div className="flex space-x-3 items-center md:space-x-0 md:w-full">
                 <div className="h-[60px] w-[71px] flex-shrink-0 rounded-[4px] overflow-hidden bg-slate-600 md:h-[94px] md:w-[133px]">
@@ -140,7 +127,7 @@ const Explore = () => {
                   className="w-full h-full"
                 />
               </div>
-            </div>
+            </button>
           ))}
           <div className="flex justify-end mt-4">
             <button className="text-primary font-semibold text-[12px] md:text-[16px]">
@@ -162,7 +149,7 @@ const Explore = () => {
           View all
         </button>
       </div>
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-3 mb-10 md:mx-20 lg:mx-32 md:space-x-8 md:h-[265px]">
+      <div className="flex h-[133px] overflow-auto pb-1 space-x-2 ml-4 mt-3 pr-4 mb-10 md:mx-20 lg:mx-32 md:space-x-8 md:h-[265px]">
         {empowerHerImages.map((image, index) => (
           <div
             key={index}
@@ -184,9 +171,12 @@ const Explore = () => {
       <p className="font-semibold pl-4 text-[16px] md:text-[24px] md:mt-14 md:pl-20 lg:pl-32">
         Female Internship Roles In Tech
       </p>
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 rounded-[4px] mt-3 md:mx-20 md:space-x-8 md:h-[265px] lg:mx-32">
+      <div className="flex h-[133px] overflow-auto pb-1 pr-4 space-x-2 ml-4 rounded-[4px] mt-3 md:mx-20 md:space-x-8 md:h-[265px] lg:mx-32">
         {content2Images.map((image, index) => (
-          <div key={index} className="flex-shrink-0 w-[125px] rounded-[4px] overflow-hidden h-full md:w-[272px]">
+          <div
+            key={index}
+            className="flex-shrink-0 w-[125px] rounded-[4px] overflow-hidden h-full md:w-[272px]"
+          >
             <Image
               src={image}
               alt="tech event"
@@ -204,7 +194,7 @@ const Explore = () => {
         Upcoming Bootcamps
       </p>
 
-      <div className="flex h-[133px] overflow-auto scrollbar-hide space-x-2 ml-4 mt-4 md:mt-6 md:space-x-8 md:h-[265px] md:mx-20 lg:mx-32">
+      <div className="flex h-[133px] overflow-auto pb-1 pr-4 space-x-2 ml-4 mt-4 md:mt-6 md:space-x-8 md:h-[265px] md:mx-20 lg:mx-32">
         {upcomingBootcampsImages.map((image, index) => (
           <div
             key={index}
