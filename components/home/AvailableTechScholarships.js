@@ -33,7 +33,7 @@ const AvailableTechScholarships = () => {
               width={185}
               className="h-full w-full object-cover"
             />
-            <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden absolute top-2 left-2">
+            {/* <div className="h-[24px] w-[24px] rounded-[2px] overflow-hidden absolute top-2 left-2">
               <Image
                 src={workspacePremiumIcon}
                 alt="premium icon"
@@ -43,7 +43,7 @@ const AvailableTechScholarships = () => {
                 width={24}
                 className="h-full w-full"
               />
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

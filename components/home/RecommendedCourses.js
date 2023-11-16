@@ -72,7 +72,7 @@ const RecommendedCourses = () => {
                 loading="eager"
                 className="h-full w-full object-cover"
               />
-              {index > 0 && (
+              {/* {index > 0 && (
                 <div className="flex justify-between items-center absolute top-2.5 left-2 right-2">
                   {" "}
                   <div className="h-[24px] w-[24px]">
@@ -98,7 +98,7 @@ const RecommendedCourses = () => {
                     />
                   </div>{" "}
                 </div>
-              )}
+              )} */}
             </div>
             <div className="w-full bg-secondaryShade1 py-2 px-2.5">
               <div className="flex space-x-1.5 mb-0.5 ">
