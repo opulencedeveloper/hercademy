@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import Image from "next/image";
 
-import logo from "../../public/asset/logo/hercademy-logo.svg";
+import logo from "../../public/asset/logo/animated-logo.gif";
 
 const Splash = ({ splashSwitcher }) => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const Splash = ({ splashSwitcher }) => {
 
     const timer = setTimeout(() => {
       splashSwitcher();
-    }, 5000);
+    }, 6000);
 
     return () => {
       document.body.classList.remove("overflow-hidden");
@@ -19,9 +19,8 @@ const Splash = ({ splashSwitcher }) => {
   }, []);
   return (
     <div className="fixed top-0 right-0 h-screen w-full flex items-center justify-center bg-primaryShade6 overflow-hidden scrollbar-hide">
-      <div className="flex flex-col items-center mb-12">
-        <div className="flex items-end justify-center">
-          <div className="h-[72px] w-[72px">
+     
+          <div className="h-auto w-auto">
             <Image
               src={logo}
               alt="logo"
@@ -30,12 +29,7 @@ const Splash = ({ splashSwitcher }) => {
               className="w-full h-full"
             />
           </div>
-          <p className="font-extrabold text-[22px] -ml-2 mb-1.5 text-white md:text-[32px]">HERCADEMY</p>
-        </div>
-        <p className="text-[14px] font-medium italic text-white -mt-1 ml-2 md:text-[24px]">
-          Giving her a chance to thrive
-        </p>
-      </div>
+         
     </div>
   );
 };
