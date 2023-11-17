@@ -90,7 +90,7 @@ const TechCommuntiesGrid = () => {
         {filterTechEvents.map((sectionData, index) => (
           <div
             key={index}
-            className="w-[171px] rounded-[8px] mb-6 overflow-hidden md:w-[350px]"
+            className="w-[171px] rounded-[8px] mb-6 overflow-hidden max-[375px]:w-full md:w-[350px]"
           >
             <div className="relative h-[118px] w-full md:h-[230px]">
               <Image
@@ -104,9 +104,9 @@ const TechCommuntiesGrid = () => {
               />
             </div>
             <div className="h-[78px] w-full flex flex-col justify-between pt-1.5 pb-2 px-[5.5px] bg-secondaryShade10 md:px-[10px] md:pb-2">
-              <p className="text-[14px] font-medium md:text-[22px]">{sectionData.title}</p>
+              <p className="text-[14px] font-medium  max-[375px]:text-[19px] md:text-[22px]">{sectionData.title}</p>
               <div className="flex w-full justify-between items-end ">
-                <div className="flex justify-end relative w-[105px] md:w-32">
+                <div className="flex justify-end relative w-[105px] max-[375px]:w-[125px] md:w-32">
                   <div className={"absolute left-0 h-[18px] w-[18px] md:w-[22px] md:h-[22px]"}>
                     <Image
                       src={avatarOne}
@@ -158,11 +158,11 @@ const TechCommuntiesGrid = () => {
                   >
                     {sectionData.members}
                   </div>
-                  <p className="text-[10px] md:text-[14px]">members</p>
+                  <p className="text-[10px] max-[375px]:text-[14px]  md:text-[14px]">members</p>
                 </div>
 
                 
-                <button className="text-[8px] bg-white py-0.5 px-1.5 rounded-[4px] md:text-[10px]">
+                <button className="text-[8px] bg-white py-0.5 px-1.5 rounded-[4px] max-[375px]:text-[13px] md:text-[10px]">
                   Join group
                 </button>
               </div>
