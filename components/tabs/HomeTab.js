@@ -13,16 +13,16 @@ import PremiumOverlay from "../UI/PremiumOverlay";
 import { useState } from "react";
 
 const categories = [
-  { title: "Trainings", link: "/home" },
-  { title: "Jobs", link: "/home" },
-  { title: "Courses", link: "/home" },
-  { title: "Blogs", link: "/home" },
-  { title: "Tech events", link: "/home" },
-  { title: "Communities", link: "/techcommunties" },
-  { title: "Portfolio", link: "/portfolio" },
-  { title: "Mock Interview", link: "/home" },
-  { title: "CV Optimisation", link: "/home" },
-  { title: "Tech scholarship", link: "/home" },
+  { title: "Training", id: "d1" },
+  { title: "Jobs", id: "d2" },
+  { title: "Courses", id: "d3" },
+  { title: "Blogs", id: "d4" },
+  { title: "Tech events", id: "d5" },
+  { title: "Communities", id: "d6" },
+  { title: "Portfolio", id: "d7" },
+  { title: "Mock Interview", id: "d9" },
+  { title: "CV Optimisation", id: "d10" },
+  { title: "Tech scholarships", id: "d8" },
 ];
 
 const HomeTab = () => {
@@ -31,6 +31,17 @@ const HomeTab = () => {
   const premiumSwitcherHandler = () => {
     setIsPremium((prev) => !prev);
   };
+
+  const handleScroll = (id) => {
+  const targetElement = document.getElementById(id);
+
+  if (targetElement) {
+    window.scroll({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+};
 
   return (
     <>
@@ -49,13 +60,33 @@ const HomeTab = () => {
           </div>
           <div className=" space-y-5 mt-5">
             {categories.map((categoriesData, index) => (
-              <Link
-                href={categoriesData.link}
-                key={index}
-                className="block font-medium text-[16px]"
-              >
-                {categoriesData.title}
-              </Link>
+              <button
+              onClick={() => {
+                if (
+                  categoriesData.title !== "Communities" ||
+                  categoriesData.title !== "Portfolio"
+                ) {
+                  handleScroll(categoriesData.id);
+                }
+                if (categoriesData.title === "Communities") {
+                  router.push("/techcommunties");
+                }
+                if (categoriesData.title === "Portfolio") {
+                  premiumSwitcherHandler();
+                }
+              }}
+              key={index}
+              className="block text-[16px] text-primary1"
+            >
+              {categoriesData.title}
+            </button>
+              // <Link
+              //   href={categoriesData.link}
+              //   key={index}
+              //   className="block font-medium text-[16px]"
+              // >
+              //   {categoriesData.title}
+              // </Link>
             ))}
           </div>
         </div>
