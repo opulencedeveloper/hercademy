@@ -65,6 +65,8 @@ const OnBoarding = ({ switcher }) => {
                     alt={onBoardingtData.title}
                     height={280}
                     width={343}
+                    loading="eager"
+                    priority
                     className="h-full w-full object-cover"
                   />
                 </div>
