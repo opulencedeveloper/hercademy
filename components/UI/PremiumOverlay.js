@@ -23,7 +23,7 @@ const PremiumOverlay = ({premiumSwitcherHandler}) => {
               >
                 <Image
                   src={closeIcon}
-                  alt="close icon"
+                  alt="close"
                   className="w-full h-full"
                   priority
                   loading="eager"
@@ -38,12 +38,12 @@ const PremiumOverlay = ({premiumSwitcherHandler}) => {
             <div className="flex flex-wrap justify-between px-4 w-full">
               {sectionDetails.map((sectionData, index) => (
                 <div key={index} className="text-medium text-base md:text-[20px]">
-                  <div className="flex gap-1.5 items-end">
-                    <div className=" h-[8px] w-[8px] rounded-full bg-black mb-2"></div>
+                  <div className="flex items-end">
+                    <div className=" h-[8px] w-[8px] rounded-full bg-black mb-2 mr-1.5 md:h-[11px] md:w-[11px]"></div>
                     <p>{sectionData.title1}</p>
                   </div>
-                  <div className="flex items-end gap-1.5">
-                    <div className="h-[8px] w-[8px] rounded-full bg-black mb-2  md:h-[11px] md:w-[11px]"></div>
+                  <div className="flex items-end">
+                    <div className="h-[8px] w-[8px] rounded-full bg-black mb-2 mr-1.5  md:h-[11px] md:w-[11px]"></div>
                     <p>{sectionData.title2}</p>
                   </div>
                 </div>

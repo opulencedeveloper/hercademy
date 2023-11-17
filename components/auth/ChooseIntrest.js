@@ -74,7 +74,7 @@ const ChooseIntrest = () => {
             <button
               onClick={() => setSelectedIntrest(interestData)}
               key={index}
-              className="flex items-center gap-5"
+              className="flex items-center "
             >
               <div className="h-[20px] w-[20px]">
                 <Image
@@ -91,7 +91,7 @@ const ChooseIntrest = () => {
                   className="h-full w-full"
                 />
               </div>
-              <p className="text-[16px] font-medium md:text-[19px]">
+              <p className="text-[16px] ml-5 font-medium md:text-[19px]">
                 {interestData}
               </p>
             </button>
@@ -99,13 +99,13 @@ const ChooseIntrest = () => {
         </div>
       </div>
 
-      <button
+     <div> <button
         onClick={() => router.replace("/home")}
-        className="flex-shrink-0 text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold mb-8 md:h-[50px] md:text-[19px]"
+        className="flex-shrink-0 text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold mb-5 md:h-[50px] md:text-[19px]"
       >
         Choose
       </button>
-      
+      </div>
     </div>
   )
 }

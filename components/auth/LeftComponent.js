@@ -144,7 +144,7 @@ const LeftComponent = ({ children }) => {
 and successful tech career guided by industry experts.</p>
         </div>
       </section> */}
-      <section className="w-full h-full scrollbar-hide overflow-auto px-4 md:px-12 lg:w-1/2 xl:px-32">
+      <section className="flex flex-col w-full h-full overflow-auto px-4 md:px-12 lg:w-1/2 xl:px-32">
         {children}
       </section>
     </div>
