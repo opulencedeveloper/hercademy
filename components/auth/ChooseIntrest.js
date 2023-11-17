@@ -41,7 +41,7 @@ const ChooseIntrest = () => {
   };
 
   return (
-    <div className="animateSlideUp flex flex-col justify-between h-full text-center py-14 pb-5">
+    <div className="animateSlideUp flex flex-col justify-between h-full text-center pt-14 ">
       <div>
         {" "}
         <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
@@ -101,14 +101,11 @@ const ChooseIntrest = () => {
 
       <button
         onClick={() => router.replace("/home")}
-        className="flex-shrink-0 text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold md:h-[50px] md:text-[19px]"
+        className="flex-shrink-0 text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold mb-8 md:h-[50px] md:text-[19px]"
       >
         Choose
       </button>
-      <div
-        className="flex-shrink-0 h-[43px] w-full"
-      >
-      </div>
+      
     </div>
   )
 }

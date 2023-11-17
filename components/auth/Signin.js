@@ -85,7 +85,7 @@ const SignIn = ({ switcher }) => {
             </button>
           </div>
         </div>
-        <div className="space-y-5 mt-8">
+        <div className="space-y-5 mt-12">
           <button
             onClick={() => router.push("/home")}
             className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold md:text-[16px] md:h-[48px]"

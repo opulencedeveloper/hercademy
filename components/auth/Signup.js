@@ -78,7 +78,7 @@ const SignUp = ({ switcher }) => {
             </div>
           ))}
         </form>
-        <div className="space-y-5 mt-8">
+        <div className="space-y-5 mt-12">
           <button
             onClick={() => switcher("chooseintrest")}
             className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold"
