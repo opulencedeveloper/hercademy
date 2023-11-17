@@ -20,7 +20,14 @@ const DesktopNavBar = () => {
     <header className="hidden sticky top-0 z-30 md:flex items-center justify-between bg-white shadow-customShadow1 h-[80px] md:px-20 lg:px-32">
       <div className="flex items-center space-x-2 h-[44px]">
         <div className="h-full w-[44px]">
-          <Image src={logo} className="h-full w-full" height={44} width={44} />
+          <Image
+            src={logo}
+            className="h-full w-full"
+            loading="eager"
+            priority
+            height={44}
+            width={44}
+          />
         </div>
         <p className="font-extrabold text-[24px] text-primary pt-1">
           HERCADEMY
@@ -28,7 +35,8 @@ const DesktopNavBar = () => {
       </div>
       <nav className="flex items-center space-x-7">
         {navigationItems.map((navData, index) => {
-          const style = activeLink === navData.link ? "text-primary" : "text-primaryShade5";
+          const style =
+            activeLink === navData.link ? "text-primary" : "text-primaryShade5";
 
           return (
             <Link

@@ -20,7 +20,8 @@ const WishList = () => {
     <Layout>
       <section className="h-full scrollbar-hide flex pt-20 flex-col items-center justify-center max-w-[619px] px-8 mx-auto">
         <div className="h-[180px] w-[180px] mb-20 md:h-[265.83px] md:w-[239.25px]">
-          <Image src={contracttImage} className="h-full w-full" />
+          <Image src={contracttImage} className="h-full w-full" loading="eager"
+                  priority alt="contract"/>
         </div>
         <p className="font-semibold text-[16px] mb-2 md:text-[36px]">Your wishlist is empty</p>
         <p className="text-[12px] text-secondary md:text-[24px]">Create your first wishlist</p>
@@ -30,6 +31,7 @@ const WishList = () => {
               src={addCircleIcon}
               height={24}
               width={24}
+              alt="add circle icon"
               className="h-full w-full"
               priority
               loading="eager"

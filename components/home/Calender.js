@@ -74,6 +74,8 @@ const Calender = (props) => {
               src={angleRightIcon}
               height={14}
               width={14}
+              loading="eager"
+              priority
               alt="angle right icon"
               className="w-full h-full"
             />
@@ -96,6 +98,8 @@ const Calender = (props) => {
               src={angleLeftIcon}
               height={14}
               width={17}
+              loading="eager"
+              priority
               alt="angle left icon"
               className="w-full h-full"
             />
@@ -171,7 +175,7 @@ const Calender = (props) => {
         currentMonth.getMonth(),
         day
       );
-      const isToday = date.toDateString() === new Date().toDateString(); 
+      const isToday = date.toDateString() === new Date().toDateString();
       const isSelected =
         selectedDate && date.toDateString() === selectedDate.toDateString();
 
@@ -204,7 +208,6 @@ const Calender = (props) => {
     <>
       <div className="flex flex-col px-4 pb-4 h-screen overflow-hidden pt-7 max-w-[524px] mx-auto bg-white">
         <div className="flex items-center pb-5">
-          
           <div className="flex flex-1 justify-center text-[20px] font-bold">
             Save Date
           </div>

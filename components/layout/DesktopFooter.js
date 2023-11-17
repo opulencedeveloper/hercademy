@@ -37,7 +37,13 @@ const DesktopFooter = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-end justify-center">
             <div className="h-[72px] w-[72px">
-              <Image src={logo} alt="logo" className="w-full h-full" />
+              <Image
+                src={logo}
+                alt="logo"
+                className="w-full h-full"
+                loading="eager"
+                priority
+              />
             </div>
             <p className="font-extrabold text-[32px] text-white">HERCADEMY</p>
           </div>

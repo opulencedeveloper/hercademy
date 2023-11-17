@@ -12,6 +12,7 @@ const Notification = ({toggleNotifcation}) => {
           src={devfestImage}
           width={85}
           height={85}
+          alt="image"
           priority
           loading="eager"
           className="w-full h-full object-cover"

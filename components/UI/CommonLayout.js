@@ -25,6 +25,9 @@ const CommonLayout = ({
         <Image
           src={image}
           className="h-full w-full object-cover"
+          loading="eager"
+          priority
+          alt="image"
           height={462}
           width={1232}
         />

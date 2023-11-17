@@ -37,6 +37,7 @@ const Portfolio = () => {
               src={dishaImage}
               height={280}
               width={343}
+              alt="disha"
               priority
               loading="eager"
               className="h-full w-full object-cover"

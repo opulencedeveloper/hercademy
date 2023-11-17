@@ -50,6 +50,8 @@ const TechProgrammeDetail = () => {
                 <Image
                   src={hertechtrailIcon}
                   alt="google icon"
+                  loading="eager"
+                  priority
                   height={14}
                   width={14}
                   className="w-full h-full"

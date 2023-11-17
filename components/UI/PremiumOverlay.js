@@ -23,6 +23,7 @@ const PremiumOverlay = ({premiumSwitcherHandler}) => {
               >
                 <Image
                   src={closeIcon}
+                  alt="close icon"
                   className="w-full h-full"
                   priority
                   loading="eager"

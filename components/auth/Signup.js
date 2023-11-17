@@ -68,6 +68,7 @@ const SignUp = ({ switcher }) => {
                       className="h-full w-full"
                       height={16}
                       width={16}
+                      alt="visibility icon"
                       priority
                       loading="eager"
                     />

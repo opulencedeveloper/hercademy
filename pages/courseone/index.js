@@ -84,7 +84,6 @@ const sectionContent = [
       "Media queries and breakpoints. Fluid grids and flexible images. Mobile-first approach to design.",
     duration: "2hrs",
   },
-  
 ];
 
 const coursesrecommended = [
@@ -124,18 +123,17 @@ const coursesrecommended = [
 
 const RecommendedCourses = () => {
   const router = useRouter();
-  
-  const [showLoading, setShowLoading] = useState(true); 
-  
+
+  const [showLoading, setShowLoading] = useState(true);
+
   const loadingSwitcher = () => {
     setShowLoading((prev) => !prev);
   };
-  
+
   return showLoading ? (
-    <Loading loadingSwitcher={loadingSwitcher} /> 
+    <Loading loadingSwitcher={loadingSwitcher} />
   ) : (
     <section className="relative w-full h-screen mx-auto scrollbar-hide overflow-y-auto pt-7 pb-2">
-      
       <section className="px-4 mt-2 md:px-20 lg:px-32">
         {" "}
         <div className="w-full flex-shrink-0 rounded-[4px] overflow-hidden mb-5">
@@ -145,6 +143,8 @@ const RecommendedCourses = () => {
               alt="Front-end Development Beginners Guide Image"
               height={107}
               width={185}
+              loading="eager"
+              priority
               className="h-full w-full object-cover"
             />
           </div>
@@ -156,6 +156,8 @@ const RecommendedCourses = () => {
                   alt="google icon"
                   height={14}
                   width={14}
+                  loading="eager"
+                  priority
                   className="w-full h-full"
                 />
               </div>
@@ -182,6 +184,8 @@ const RecommendedCourses = () => {
                   alt={navData.title}
                   height={23}
                   width={23}
+                  loading="eager"
+                  priority
                   className="w-full h-full cursor-pointer"
                 />
               </div>
@@ -219,6 +223,8 @@ const RecommendedCourses = () => {
                     className="w-full h-full"
                     height={32}
                     width={32}
+                    loading="eager"
+                    priority
                   />
                 </div>
                 <p className="font-semibold text-[12px] text-primary1">

@@ -138,6 +138,8 @@ const Explore = () => {
                   src={angleRightIcon}
                   height={10}
                   width={5}
+                  loading="eager"
+                  priority
                   alt="angle right icon"
                   className="w-full h-full"
                 />

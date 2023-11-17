@@ -84,6 +84,8 @@ const ChooseIntrest = () => {
                       : radioInactive
                   }
                   alt="radio button"
+                  loading="eager"
+                  priority
                   height={20}
                   width={20}
                   className="h-full w-full"

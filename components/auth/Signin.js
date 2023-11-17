@@ -67,6 +67,7 @@ const SignIn = ({ switcher }) => {
                       <Image
                         src={obsureText ? obsurePasswordIcon : nonObsurePasswordIcon}
                         className="h-full w-full"
+                        alt="visibility icon"
                         height={16}
                         width={16}
                         priority
