@@ -1,16 +1,18 @@
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
+
 import RecommendedCourses from "../home/RecommendedCourses";
 import SectionSelector from "../home/SectionSelector";
 import TechProgrammes from "../home/AvailableTechScholarships";
 import TopSection from "../home/TopSection";
 import UpcomingTechEvents from "../home/UpcomingTechEvents";
-
-import image11 from "../../public/asset/images/image-11.svg";
-import image12 from "../../public/asset/images/image-12.svg";
 import CommonLayout from "../UI/CommonLayout";
 import RecruitersCorner from "../home/RecruitersCorner";
 import PremiumOverlay from "../UI/PremiumOverlay";
-import { useState } from "react";
+
+import image11 from "../../public/asset/images/image-11.svg";
+import image12 from "../../public/asset/images/image-12.svg";
+
 
 const categories = [
   { title: "Training", id: "d1" },
@@ -27,6 +29,7 @@ const categories = [
 
 const HomeTab = () => {
   const [isPremium, setIsPremium] = useState(false);
+  const router = useRouter();
 
   const premiumSwitcherHandler = () => {
     setIsPremium((prev) => !prev);
