@@ -60,6 +60,30 @@ const sectionContent = [
       "Media queries and breakpoints. Fluid grids and flexible images. Mobile-first approach to design.",
     duration: "2hrs",
   },
+  {
+    title: "Introduction to Front-End Development",
+    description:
+      "Understanding front-end vs. back-end development.Importance of front-end development in web applications.",
+    duration: "30mins",
+  },
+  {
+    title: "HTML (HyperText Markup Language)",
+    description:
+      "Basic HTML structure and syntax. Working with headings, paragraphs, lists, and links. Forms and input elements.",
+    duration: "40mins",
+  },
+  {
+    title: "CSS (Cascading Style Sheets)",
+    description:
+      "Introduction to CSS and its role in web design. CSS selectors and properties. Styling text, colors, backgrounds, and borders. CSS layout techniques",
+    duration: "2hrs",
+  },
+  {
+    title: "Responsive Web Design",
+    description:
+      "Media queries and breakpoints. Fluid grids and flexible images. Mobile-first approach to design.",
+    duration: "2hrs",
+  },
   
 ];
 

@@ -5,6 +5,13 @@ import TechProgrammes from "../home/AvailableTechScholarships";
 import TopSection from "../home/TopSection";
 import UpcomingTechEvents from "../home/UpcomingTechEvents";
 
+import image11 from "../../public/asset/images/image-11.svg";
+import image12 from "../../public/asset/images/image-12.svg";
+import CommonLayout from "../UI/CommonLayout";
+import RecruitersCorner from "../home/RecruitersCorner";
+import PremiumOverlay from "../UI/PremiumOverlay";
+import { useState } from "react";
+
 const categories = [
   { title: "Trainings", link: "/home" },
   { title: "Jobs", link: "/home" },
@@ -19,11 +26,19 @@ const categories = [
 ];
 
 const HomeTab = () => {
-  //onClick={() => router.push("/techevents")}
+  const [isPremium, setIsPremium] = useState(false);
+
+  const premiumSwitcherHandler = () => {
+    setIsPremium((prev) => !prev);
+  };
+
   return (
     <>
       <TopSection />
-      <SectionSelector />{" "}
+      <SectionSelector premiumSwitcherHandler={premiumSwitcherHandler}/>{" "}
+      {isPremium && (
+        <PremiumOverlay premiumSwitcherHandler={premiumSwitcherHandler} />
+      )}
       <div className="flex justify-between mt-8 w-full h-full overflow-hidden md:mt-14 md:px-20 lg:px-32">
         <div className="hidden md:flex flex-col w-[280px] h-max  flex-shrink-0 shadow-customShadow2 rounded-[8px] bg-secondary5 p-7 mr-10">
           <div className="border-b border-secondaryShade1 pb-4">
@@ -50,7 +65,20 @@ const HomeTab = () => {
           <UpcomingTechEvents />
         </div>
       </div>
+      <CommonLayout
+      premiumSwitcherHandler={premiumSwitcherHandler}
+        image={image11}
+        title="Mock Interview"
+        subTitle="Let’s help you get your dreamed job via our mock interview scheme. Book your own session now."
+      />
       <TechProgrammes />
+      <RecruitersCorner premiumSwitcherHandler={premiumSwitcherHandler}/>
+      <CommonLayout
+      premiumSwitcherHandler={premiumSwitcherHandler}
+        image={image12}
+        title="CV/LinkedIn Optimisation"
+        subTitle="Let’s give you a professional CV that suits your dreamed job."
+      />
     </>
   );
 };

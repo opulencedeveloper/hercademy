@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Portal from "../UI/Portal";
 
 const sectionItems = ["Categories", "Trainings", "Jobs", "Courses", "Blogs"];
 const dropDown = [
@@ -24,7 +25,7 @@ const handleScroll = (id) => {
   }
 };
 
-const SectionSelector = () => {
+const SectionSelector = ({premiumSwitcherHandler}) => {
   const [selectedSection, setSelectedSection] = useState("Categories");
   const router = useRouter();
   const [showCategoriesDropDown, setShowCategoriesDropDown] = useState(false);
@@ -52,8 +53,8 @@ const SectionSelector = () => {
         })}
       </div>
       {showCategoriesDropDown && (
-        <div className="animateSlideUp absolute top-8 left-5 shadow-customShadow1 p-5 rounded-[4px] space-y-3 z-30 bg-white w-[213px]">
-          {dropDown.map((dropDownItem, index) => (
+      <Portal togglePortalHandler={() => setShowCategoriesDropDown((prev) => !prev)}>  <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 shadow-customShadow1 p-5 rounded-[4px] space-y-3 z-30 bg-white w-[213px]">
+         <div className="animateSlideDown h-full w-full"> {dropDown.map((dropDownItem, index) => (
             <button
               onClick={() => {
                 setShowCategoriesDropDown((prev) => !prev);
@@ -67,7 +68,7 @@ const SectionSelector = () => {
                   router.push("/techcommunties");
                 }
                 if (dropDownItem.title === "Portfolio") {
-                  router.push("/portfolio");
+                  premiumSwitcherHandler();
                 }
               }}
               key={index}
@@ -75,8 +76,9 @@ const SectionSelector = () => {
             >
               {dropDownItem.title}
             </button>
-          ))}
+          ))}</div>
         </div>
+        </Portal>
       )}
     </div>
   );

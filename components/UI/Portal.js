@@ -23,10 +23,9 @@ const Portal = (props) => {
 
   return ReactDOM.createPortal(
     <>
-      
       <div
       onClick={togglePortalHandler}
-        className={`${inter.className}  absolute top-0 h-screen w-full z-40 bg-black opacity-60`}
+        className={`${inter.className}  fixed top-0 h-screen w-full z-40 bg-black opacity-60`}
       ></div>
       <div className="h-max fixed top-1/2 w-full z-50">{children}</div>
     </>,
