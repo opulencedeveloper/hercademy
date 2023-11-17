@@ -9,6 +9,7 @@ const techEventImages = [
   techHerFirstImage,
   devfestImage,
   beyondInclusionImage,
+  techHerFirstImage,
 ];
 
 const UpcomingTechEvents = () => {
