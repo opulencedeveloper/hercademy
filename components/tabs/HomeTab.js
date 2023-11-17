@@ -35,7 +35,7 @@ const HomeTab = () => {
   return (
     <>
       <TopSection />
-      <SectionSelector premiumSwitcherHandler={premiumSwitcherHandler}/>{" "}
+      <SectionSelector premiumSwitcherHandler={premiumSwitcherHandler} />{" "}
       {isPremium && (
         <PremiumOverlay premiumSwitcherHandler={premiumSwitcherHandler} />
       )}
@@ -48,15 +48,19 @@ const HomeTab = () => {
             </div>
           </div>
           <div className=" space-y-5 mt-5">
-            {categories.map((categoriesData, index) => (
-              <Link
-                href={categoriesData.link}
-                key={index}
-                className="block font-medium text-[16px]"
-              >
-                {categoriesData.title}
-              </Link>
-            ))}
+            {categories.map((categoriesData, index) =>
+              categoriesData.title === "Portfolio" ? (
+                premiumSwitcherHandler()
+              ) : (
+                <Link
+                  href={categoriesData.link}
+                  key={index}
+                  className="block font-medium text-[16px]"
+                >
+                  {categoriesData.title}
+                </Link>
+              )
+            )}
           </div>
         </div>
         <div className="flex flex-col w-full h-full md:w-[75%]">
@@ -66,17 +70,17 @@ const HomeTab = () => {
         </div>
       </div>
       <CommonLayout
-      premiumSwitcherHandler={premiumSwitcherHandler}
-      myId={"d9"}
+        premiumSwitcherHandler={premiumSwitcherHandler}
+        myId={"d9"}
         image={image11}
         title="Mock Interview"
         subTitle="Let’s help you get your dreamed job via our mock interview scheme. Book your own session now."
       />
       <TechProgrammes />
-      <RecruitersCorner premiumSwitcherHandler={premiumSwitcherHandler}/>
+      <RecruitersCorner premiumSwitcherHandler={premiumSwitcherHandler} />
       <CommonLayout
-      premiumSwitcherHandler={premiumSwitcherHandler}
-      myId={"d10"}
+        premiumSwitcherHandler={premiumSwitcherHandler}
+        myId={"d10"}
         image={image12}
         title="CV/LinkedIn Optimisation"
         subTitle="Let’s give you a professional CV that suits your dreamed job."
