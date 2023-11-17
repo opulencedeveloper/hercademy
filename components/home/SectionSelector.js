@@ -12,8 +12,8 @@ const dropDown = [
   { title: "Tech events", id: "d5" },
   { title: "Communities", id: "d6" },
   { title: "Portfolio", id: "d7" },
-  { title: "Mock Interview", link: "d9" },
-  { title: "CV Optimisation", link: "d10" },
+  { title: "Mock Interview", id: "d9" },
+  { title: "CV Optimisation", id: "d10" },
   { title: "Tech scholarships", id: "d8" },
 
 ];
