@@ -25,8 +25,8 @@ const SignIn = ({ switcher }) => {
   }, []);
 
   return (
-    <div className="animateSlideUp flex flex-col text-center pt-14 pb-3 h-full ">
-      <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
+    <div className="animateSlideUp flex flex-col justify-between text-center pt-14 pb-3 h-full ">
+     <div> <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Welcome Back!{" "}
       </p>
       <p className="text-[14px] text-secondaryShade3 md:text-[16px]">
@@ -85,7 +85,7 @@ const SignIn = ({ switcher }) => {
             </button>
           </div>
         </div>
-        <div className="space-y-5">
+        <div className="space-y-5 mt-8">
           <button
             onClick={() => router.push("/home")}
             className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold md:text-[16px] md:h-[48px]"
@@ -107,13 +107,13 @@ const SignIn = ({ switcher }) => {
             <p className="md:text-[16px]">Sign up with Google</p>
           </button>
         </div>
-        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
+        {" "}
+      </div> </div><div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
           <p className="text-secondaryShade4">Don’t have an account? </p>{" "}
           <button onClick={() => switcher("signup")} className="text-primary">
             Sign Up
           </button>
-        </div>{" "}
-      </div>
+        </div>
     </div>
   );
 };

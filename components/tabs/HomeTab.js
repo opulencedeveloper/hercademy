@@ -67,6 +67,7 @@ const HomeTab = () => {
       </div>
       <CommonLayout
       premiumSwitcherHandler={premiumSwitcherHandler}
+      myId={"d9"}
         image={image11}
         title="Mock Interview"
         subTitle="Let’s help you get your dreamed job via our mock interview scheme. Book your own session now."
@@ -75,6 +76,7 @@ const HomeTab = () => {
       <RecruitersCorner premiumSwitcherHandler={premiumSwitcherHandler}/>
       <CommonLayout
       premiumSwitcherHandler={premiumSwitcherHandler}
+      myId={"d10"}
         image={image12}
         title="CV/LinkedIn Optimisation"
         subTitle="Let’s give you a professional CV that suits your dreamed job."

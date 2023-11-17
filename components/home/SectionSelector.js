@@ -15,7 +15,6 @@ const dropDown = [
   { title: "Mock Interview", id: "d9" },
   { title: "CV Optimisation", id: "d10" },
   { title: "Tech scholarships", id: "d8" },
-
 ];
 
 const handleScroll = (id) => {
@@ -24,12 +23,12 @@ const handleScroll = (id) => {
   if (targetElement) {
     window.scroll({
       top: targetElement.offsetTop,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }
 };
 
-const SectionSelector = ({premiumSwitcherHandler}) => {
+const SectionSelector = ({ premiumSwitcherHandler }) => {
   const [selectedSection, setSelectedSection] = useState("Categories");
   const router = useRouter();
   const [showCategoriesDropDown, setShowCategoriesDropDown] = useState(false);
@@ -57,31 +56,38 @@ const SectionSelector = ({premiumSwitcherHandler}) => {
         })}
       </div>
       {showCategoriesDropDown && (
-      <Portal togglePortalHandler={() => setShowCategoriesDropDown((prev) => !prev)}>  <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 shadow-customShadow1 p-5 rounded-[4px] space-y-3 z-30 bg-white w-[213px]">
-         <div className="animateSlideDown h-full w-full"> {dropDown.map((dropDownItem, index) => (
-            <button
-              onClick={() => {
-                setShowCategoriesDropDown((prev) => !prev);
-                if (
-                  dropDownItem.title !== "Communities" ||
-                  dropDownItem.title !== "Portfolio"
-                ) {
-                  handleScroll(dropDownItem.id);
-                }
-                if (dropDownItem.title === "Communities") {
-                  router.push("/techcommunties");
-                }
-                if (dropDownItem.title === "Portfolio") {
-                  premiumSwitcherHandler();
-                }
-              }}
-              key={index}
-              className="block text-[16px] text-primary1"
-            >
-              {dropDownItem.title}
-            </button>
-          ))}</div>
-        </div>
+        <Portal
+          togglePortalHandler={() => setShowCategoriesDropDown((prev) => !prev)}
+        >
+          {" "}
+          <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 shadow-customShadow1 p-5 rounded-[4px] space-y-3 z-30 bg-white w-[213px]">
+            <div className="animateSlideDown h-full space-y-5 w-full">
+              {" "}
+              {dropDown.map((dropDownItem, index) => (
+                <button
+                  onClick={() => {
+                    setShowCategoriesDropDown((prev) => !prev);
+                    if (
+                      dropDownItem.title !== "Communities" ||
+                      dropDownItem.title !== "Portfolio"
+                    ) {
+                      handleScroll(dropDownItem.id);
+                    }
+                    if (dropDownItem.title === "Communities") {
+                      router.push("/techcommunties");
+                    }
+                    if (dropDownItem.title === "Portfolio") {
+                      premiumSwitcherHandler();
+                    }
+                  }}
+                  key={index}
+                  className="block text-[16px] text-primary1"
+                >
+                  {dropDownItem.title}
+                </button>
+              ))}
+            </div>
+          </div>
         </Portal>
       )}
     </div>

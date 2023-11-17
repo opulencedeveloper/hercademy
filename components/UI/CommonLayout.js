@@ -6,9 +6,11 @@ const CommonLayout = ({
   title,
   subTitle,
   premiumSwitcherHandler,
+  myId
 }) => {
   return (
     <div
+    id={myId}
       onClick={premiumSwitcherHandler}
       className="px-4 mt-3 md:px-20 mb-5 lg:px-32"
     >

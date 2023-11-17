@@ -18,15 +18,15 @@ const SignUp = ({ switcher }) => {
   const [obsureConfirmPassword, setObsureConfirmPassword] = useState(true);
 
   return (
-    <div className="animateSlideDown flex flex-col text-center pt-20 pb-3 h-full">
-      <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
+    <div className="animateSlideDown flex flex-col justify-between text-center pt-20 pb-3 h-full">
+     <div> <p className="text-[24px] text-primary font-semibold mb-2 md:text-[32px]">
         Sign Up
       </p>
       <p className="text-[14px] text-secondaryShade3 md:text-[16px]">
         First create an account
       </p>
 
-      <div className="flex flex-col gap-3 justify-between flex-1 mt-10">
+      <div className="flex flex-col gap-3 flex-1 mt-10">
         <form className="flex flex-col space-y-6">
           {authInput.map((authInputData, index) => (
             <div className="flex w-full border-b border-secondaryShade3">
@@ -78,7 +78,7 @@ const SignUp = ({ switcher }) => {
             </div>
           ))}
         </form>
-        <div className="space-y-5">
+        <div className="space-y-5 mt-8">
           <button
             onClick={() => switcher("chooseintrest")}
             className="text-center bg-primary rounded-[8px] h-[43px] w-full text-white font-semibold"
@@ -100,13 +100,14 @@ const SignUp = ({ switcher }) => {
             <p>Sign up with Google</p>
           </button>
         </div>
-        <div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
+        
+      </div>{" "}
+      </div><div className="flex items-center justify-center gap-2 text-[14px] font-semibold md:text-[16px]">
           <p className="text-secondaryShade4">Already have an account? </p>{" "}
           <button onClick={() => switcher("signin")} className="text-primary">
             Sign in
           </button>
-        </div>{" "}
-      </div>
+        </div>
     </div>
   );
 };
