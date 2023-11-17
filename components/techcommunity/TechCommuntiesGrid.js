@@ -92,7 +92,7 @@ const TechCommuntiesGrid = () => {
             key={index}
             className="w-[171px] rounded-[8px] mb-6 overflow-hidden max-[375px]:w-full md:w-[350px]"
           >
-            <div className="relative h-[118px] w-full md:h-[230px]">
+            <div className="relative h-[118px] w-full max-[375px]:h-[140px] md:h-[230px]">
               <Image
                 src={sectionData.image}
                 alt="avatar"
