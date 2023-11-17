@@ -35,7 +35,7 @@ const PickedDateSuccess = ({ toggleDateSuccess }) => {
           </div>
         </div>
         <div className="flex items-center justify-center shadow-sm h-[125px] w-full bg-white">
-          <p className="font-bold text-[20px] text-primary">Data Saved</p>
+          <p className="font-bold text-[20px] text-primary">Date Saved</p>
         </div>
         </div>
       </div>
