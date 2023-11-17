@@ -3,6 +3,7 @@ import { useState } from "react";
 import Portal from "../UI/Portal";
 
 const sectionItems = ["Categories", "Trainings", "Jobs", "Courses", "Blogs"];
+
 const dropDown = [
   { title: "Training", id: "d1" },
   { title: "Jobs", id: "d2" },
@@ -11,7 +12,10 @@ const dropDown = [
   { title: "Tech events", id: "d5" },
   { title: "Communities", id: "d6" },
   { title: "Portfolio", id: "d7" },
+  { title: "Mock Interview", link: "d9" },
+  { title: "CV Optimisation", link: "d10" },
   { title: "Tech scholarships", id: "d8" },
+
 ];
 
 const handleScroll = (id) => {
