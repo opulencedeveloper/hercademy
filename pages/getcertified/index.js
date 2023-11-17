@@ -6,10 +6,62 @@ import { useRouter } from "next/router";
 import workspacePremiumIcon from "../../public/asset/icons/workspace-premium-icon.svg";
 import bookMarkWhiteIcon from "../../public/asset/icons/bookmark-white-icon.svg";
 import PaymentSelection from "@/components/techtprogrammesdetails/PaymentSelection";
+import playRoundedIcon from "../../public/asset/icons/play-rounded-icon.svg";
 import hertechtrailIcon from "../../public/asset/icons/hertechtrail-icon.svg";
 import frontEndFundametalsImage from "../../public/asset/images/front-end-fundametals-image.svg";
 
 import Loading from "@/components/UI/Loading";
+
+const sectionContent = [
+  {
+    title: "Introduction to Front-End Development",
+    description:
+      "Understanding front-end vs. back-end development.Importance of front-end development in web applications.",
+    duration: "30mins",
+  },
+  {
+    title: "HTML (HyperText Markup Language)",
+    description:
+      "Basic HTML structure and syntax. Working with headings, paragraphs, lists, and links. Forms and input elements.",
+    duration: "40mins",
+  },
+  {
+    title: "CSS (Cascading Style Sheets)",
+    description:
+      "Introduction to CSS and its role in web design. CSS selectors and properties. Styling text, colors, backgrounds, and borders. CSS layout techniques",
+    duration: "2hrs",
+  },
+  {
+    title: "Responsive Web Design",
+    description:
+      "Media queries and breakpoints. Fluid grids and flexible images. Mobile-first approach to design.",
+    duration: "2hrs",
+  },
+  {
+    title: "Introduction to Front-End Development",
+    description:
+      "Understanding front-end vs. back-end development.Importance of front-end development in web applications.",
+    duration: "30mins",
+  },
+  {
+    title: "HTML (HyperText Markup Language)",
+    description:
+      "Basic HTML structure and syntax. Working with headings, paragraphs, lists, and links. Forms and input elements.",
+    duration: "40mins",
+  },
+  {
+    title: "CSS (Cascading Style Sheets)",
+    description:
+      "Introduction to CSS and its role in web design. CSS selectors and properties. Styling text, colors, backgrounds, and borders. CSS layout techniques",
+    duration: "2hrs",
+  },
+  {
+    title: "Responsive Web Design",
+    description:
+      "Media queries and breakpoints. Fluid grids and flexible images. Mobile-first approach to design.",
+    duration: "2hrs",
+  },
+];
 
 
 const TechProgrammeDetail = () => {
@@ -96,7 +148,48 @@ const TechProgrammeDetail = () => {
             </div>{" "}
           </div> */}
         </div>
-        <PaymentSelection />
+        {/* <PaymentSelection /> */}
+        <p className="font-bold text-[16px] md:text-[28px]">
+          Course Content: 10 classes
+        </p>
+        <p className="text-[14px] font-medium text-secondary mt-1 md:text-[20px]">
+          Front-end development essentials course for beginners. Learn
+          foundational skills...
+        </p>
+        <div className="flex flex-col space-y-8 mt-9">
+          {" "}
+          {sectionContent.map((sectionData, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-end bg-secondaryShade10 px-2.5 py-2 rounded-[4px] md:py-4 md:px-4"
+            >
+              <div className="w-[82%] md:w-[60%]">
+                <p className="font-semibold text-[16px] md:text-[24px]">
+                  {sectionData.title}:
+                </p>
+                <p className="text-[13px] md:text-[20px]">
+                  {sectionData.description}
+                </p>
+              </div>
+              <div className="flex flex-col items-center mb-5">
+                <div className="flex-shrink-0 h-[32px] w-[32px]">
+                  <Image
+                    src={playRoundedIcon}
+                    alt="play iconb"
+                    className="w-full h-full"
+                    height={32}
+                    width={32}
+                    loading="eager"
+                    priority
+                  />
+                </div>
+                <p className="font-semibold text-[12px] text-primary1">
+                  {sectionData.duration}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
